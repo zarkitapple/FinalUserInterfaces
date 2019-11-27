@@ -1,0 +1,12 @@
+* {
+	box-sizing: border-box;
+}
+:root {
+	--color-white-bone: #f8f8f8;
+	--color-light-green: #aec957;
+	--color-beige: #e2dbac;
+	--color-green: #6e9a42;
+	--color-dark-green: #387c08;
+	--color-pine-green: #2c6705;
+	--color-gold: #ffcf40;
+}
