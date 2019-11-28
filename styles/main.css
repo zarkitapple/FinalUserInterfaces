@@ -10,3 +10,7 @@
 	--color-pine-green: #2c6705;
 	--color-gold: #ffcf40;
 }
+body {
+	width: 100%;
+	margin: auto;
+}

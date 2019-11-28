@@ -1,0 +1,59 @@
+.GridContainer {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"Header"
+		"Main"
+		"Footer";
+}
+
+.Header {
+	grid-area: Header;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: var(--color-pine-green);
+	height: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.NavBar {
+	display: flex;
+	text-align: center;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: 2em;
+}
+.NavBar a {
+	text-decoration: none;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	color: black;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.2rem;
+	background-color: var(--color-light-green);
+}
+.LoginButton {
+}
+.SignUpButton {
+}
+.Main {
+	grid-area: main;
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"OurService"
+		"Information1"
+		"Information2";
+}
+.OurService {
+	grid-area: OurService;
+}
+.Information1 {
+	grid-area: Information1;
+}
+.Information2 {
+	grid-area: Information2;
+}
