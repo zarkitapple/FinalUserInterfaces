@@ -41,15 +41,34 @@
 .SignUpButton {
 }
 .Main {
-	grid-area: main;
+	background-color: aqua;
+	grid-area: Main;
 	grid-template-columns: 100%;
 	grid-template-areas:
-		"OurService"
+		"HeroSection"
 		"Information1"
 		"Information2";
 }
-.OurService {
-	grid-area: OurService;
+.HeroSection {
+	grid-area: HeroSection;
+	background-color: var(--color-white-bone);
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"HeroSection"
+		"Information1"
+		"Information2";
+	height: 30em;
+}
+.HeroText {
+	font-weight: 600;
+	font-size: 2em;
+
+}
+.LogoHero {
+	width: 120px;
+	max-width: 100%;
+  	height: 40px;
 }
 .Information1 {
 	grid-area: Information1;
