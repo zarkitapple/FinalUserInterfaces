@@ -1,6 +1,8 @@
 .GridContainer {
 	display: grid;
 	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	row-gap: 0;
 	grid-template-areas:
 		"Header"
 		"Main"
@@ -13,8 +15,8 @@
 	top: 0;
 	z-index: 1;
 	width: 100%;
-	background-color: var(--color-pine-green);
 	height: 3em;
+	background-color: var(--color-pine-green);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -43,7 +45,12 @@
 .Main {
 	background-color: aqua;
 	grid-area: Main;
+	width: 100%;
+	display: grid;
 	grid-template-columns: 100%;
+	height: auto;
+	grid-template-rows: 36em auto auto;
+	row-gap: 0;
 	grid-template-areas:
 		"HeroSection"
 		"Information1"
@@ -52,27 +59,130 @@
 .HeroSection {
 	grid-area: HeroSection;
 	background-color: var(--color-white-bone);
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-areas:
-		"HeroSection"
-		"Information1"
-		"Information2";
-	height: 30em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 1em;
+	flex-wrap: wrap;
 }
 .HeroText {
 	font-weight: 600;
 	font-size: 2em;
-
+	color: var(--color-pine-green);
+	overflow-wrap: break-word;
+	width: 100%;
+	text-align: center;
 }
 .LogoHero {
-	width: 120px;
+	width: 360px;
 	max-width: 100%;
-  	height: 40px;
+	height: 120px;
 }
+.CallToAction {
+	width: 100%;
+	height: 3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.EmailInput{
+	font-size: 1.25em;
+	height: 100%;
+	width: 17em;
+	outline: none;
+	border: none;
+	padding: 0.25rem 1.25rem;
+	margin-right: 0.35em;
+	margin-bottom: 0.35em;
+	border-radius: 0.2rem;
+	background-color: var(--color-green);
+	color: var(--color-white-bone);
+}
+#RegisterButton {
+	font-size: 1.25em;
+	height: 100%;
+	width: 12em;
+	padding: 0.25rem 1.25rem;
+	margin-left: 0.35em;
+	margin-bottom: 0.35em;
+	white-space: normal;
+	display: block;
+	border-radius: 0.2rem;
+	border: none;
+	color: var(--color-pine-green);
+	font-weight: 700;
+	background-color: var(--color-gold);
+
+}
+
 .Information1 {
 	grid-area: Information1;
+	background-color: var(--color-light-green);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 3em;
+	justify-content: center;
 }
 .Information2 {
 	grid-area: Information2;
+	background-color: var( --color-white-bone);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 3em;
+	justify-content: center;
+	color: var(--color-pine-green);
+	font-weight: 400;
+
+}
+.InfoText{
+	width: 20em;
+
+}
+.InfoImage {
+	background-color: aquamarine;
+	width: 360px;
+	max-width: 100%;
+	height: 120px;
+	margin: 1.25em;
+}
+.ScrollButton {
+	font-size: 2em;
+	color: rgb(50, 54, 57);
+	position: fixed;
+	bottom: 0;
+	right: 50vw;
+}
+
+.Footer{
+	height: 7em;
+	grid-area: Footer;
+	background-color: var(--color-pine-green);
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.LanguageDropDown {
+	margin-left: 3em;
+	width: 8em;
+	height: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.LanguageInput {
+	font-size: 1.25em;
+	text-align: center;
+	width: 100%;
+	outline: none;
+	border: none;
+	padding: 0.25rem 1.25rem;
+	border-radius: 0.2rem;
+	background-color: var(--color-green);
+	color: var(--color-white-bone);
 }
