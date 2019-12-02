@@ -12,6 +12,20 @@
 	color: black;
 	opacity: 1; /* Firefox */
 }
+html,
+body {
+	height: 100%;
+}
+.full-height {
+	height: 100%;
+	height: -moz-calc(100vh - 56px);
+	height: -webkit-calc(100vh - 56px);
+	height: -o-calc(100vh - 56px);
+	height: calc(100vh - 56px);
+}
+.body {
+	font-family: "Roboto", sans-serif;
+}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -19,6 +33,15 @@ a {
 a:hover {
 	text-decoration: underline;
 	color: inherit;
+}
+p {
+	display: inline;
+}
+.mainBody {
+	height: 90vh;
+}
+.loginMain {
+	margin-top: 8vh;
 }
 .wrap {
 	margin-top: 3.25rem;
@@ -32,6 +55,9 @@ a:hover {
 .logoImage {
 	width: 100px;
 }
+.mainLogo {
+	width: 15vw;
+}
 .navButtonsPosition {
 	margin-left: auto;
 }
@@ -43,16 +69,34 @@ a:hover {
 	color: var(--color-gold);
 	text-decoration: none;
 }
-.heroRegister {
+#heroRegister {
 	background-color: var(--color-gold);
 	width: 100%;
 	border: 0;
 }
-.heroRegister:hover {
+#heroRegister:hover {
 	background-color: var(--color-white-bone);
 	border: 0;
 }
 .bamboo {
-	width: 90px;
-	height: 360px;
+	width: 5vw;
+	height: 55vh;
+}
+.bambooLogin {
+	width: 4.5vw;
+	height: 43vh;
+}
+.front {
+	z-index: 3;
+	position: relative;
+}
+.shareIcons {
+	font-size: 2rem;
+	margin-right: 1em;
+}
+.bgLightGreen {
+	background-color: var(--color-light-green);
+}
+.bgGreen {
+	background-color: var(--color-green);
 }

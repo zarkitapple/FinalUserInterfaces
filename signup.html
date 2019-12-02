@@ -15,6 +15,10 @@
 			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 			crossorigin="anonymous"
 		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" type="text/css" href="styles/register.css" />
 		<script
 			src="https://kit.fontawesome.com/8f1210e758.js"
@@ -30,30 +34,47 @@
 					src="resources/katlogo.png"
 			/></a>
 			<div class="navButtonsPosition" role="group">
-				<button type="button" class="btn btn-light mr-3 loginButtonColor">
-					Log In
+				<button type="button" class="btn btn-light loginButtonColor">
+					<a href="login.html">Log In </a>
 				</button>
 			</div>
 		</nav>
-		<section class="container-fluid wrap2 vh-100 p-5">
-			<h1 class="text-green text-center mt-5">
-				Register now to unlock all Katban features
-			</h1>
-			<div class="row no-gutters">
-				<div class="col align-self-center text-right">
-					<img class="img-fluid bamboo" src="resources/bamboolong.png" />
+		<section class="container-fluid wrap2 mainBody full-height p-5">
+			<div class="mt-5">
+				<div class="row justify-content-center mb-3">
+					<img class="mainLogo" src="resources/katlogo.png" />
 				</div>
-				<div class="col">
+				<div class="row justify-content-center mb-3">
+					<h1 class="text-green">
+						Register now to unlock all features
+					</h1>
+				</div>
+			</div>
+			<div class="row no-gutters mb-5">
+				<div class="col align-self-center front text-right">
+					<img class="img-fluid bamboo" src="resources/bamboolongLG.png" />
+				</div>
+				<div class="col m-n3 bgGreen align-self-center ">
 					<div class="form-row justify-content-center text-white">
-						<div class="col-auto wrap rounded p-5">
+						<div class="col-auto rounded p-3">
 							<form>
 								<div class="form-group">
 									<label for="usernameInput">Username</label>
-									<input type="text" class="form-control" id="usernameInput" />
+									<input
+										type="text"
+										class="form-control"
+										id="usernameInput"
+										required
+									/>
 								</div>
 								<div class="form-group">
 									<label for="emailInput">Email address</label>
-									<input type="email" class="form-control" id="emailInput" />
+									<input
+										type="email"
+										class="form-control"
+										id="emailInput"
+										required
+									/>
 								</div>
 								<div class="form-group">
 									<label for="passwordInput">Password</label>
@@ -61,6 +82,7 @@
 										type="password"
 										class="form-control"
 										id="passwordInput"
+										required
 									/>
 								</div>
 								<div class="form-group form-check">
@@ -68,13 +90,18 @@
 										type="checkbox"
 										class="form-check-input"
 										id="checkboxInput"
+										required
 									/>
-									<label class="form-check-label " for="checkboxInput"
-										>By checking this box you agree <br />with our terms of
+									<label class="form-check-label " for="checkboxInput">
+										By checking this box you agree <br />with our terms of
 										service</label
 									>
 								</div>
-								<button type="button" class="btn btn-light btn-lg heroRegister">
+								<button
+									type="button"
+									id="heroRegister"
+									class="btn btn-light btn-lg"
+								>
 									Submit
 								</button>
 								<small id="logInQuestion" class="form-text"
@@ -86,7 +113,55 @@
 						</div>
 					</div>
 				</div>
-				<div class="col"></div>
+				<div class="col align-self-center front text-left">
+					<img class="img-fluid bamboo" src="resources/bamboolongLG.png" />
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid ColorBackground p-3 bg-light text-center">
+			<div class="row justify-content-center align-center">
+				<div class="col-auto p-1">
+					<p class="m-1">
+						About
+					</p>
+					<p class="m-1">
+						Work with us
+					</p>
+					<p class="m-1">
+						Our vision
+					</p>
+					<p class="m-1">
+						Tutorials
+					</p>
+				</div>
+				<div class="col-auto align-self-center ml-5">
+					<i class="fab fa-facebook-square shareIcons"></i>
+					<i class="fab fa-twitter shareIcons"></i>
+					<i class="fab fa-instagram shareIcons"></i>
+				</div>
+				<div class="col-auto align-self-center">
+					<form>
+						<select class="form-control">
+							<option>
+								English
+							</option>
+							<option>
+								Spanish
+							</option>
+							<option>
+								German
+							</option>
+							<option>
+								French
+							</option>
+						</select>
+					</form>
+				</div>
+			</div>
+			<div class="row justify-content-center align-center">
+				<div class="col-auto">
+					<p>© Copyright 2019. All rights reserved.</p>
+				</div>
 			</div>
 		</section>
 		<!-- Optional JavaScript -->
@@ -106,5 +181,6 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"
 		></script>
+		<script src="scripts/form.js"></script>
 	</body>
 </html>

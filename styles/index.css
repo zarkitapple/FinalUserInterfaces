@@ -7,6 +7,19 @@
 	--color-pine-green: #2c6705;
 	--color-gold: #ffcf40;
 }
+html {
+	scroll-behavior: smooth;
+}
+.body {
+	font-family: "Roboto", sans-serif;
+}
+.scrollBodies {
+	height: 100vh;
+	padding-top: 6vh;
+}
+.mainHeader {
+	height: 6vh;
+}
 ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: black;
@@ -19,6 +32,9 @@ a {
 a:hover {
 	text-decoration: underline;
 	color: inherit;
+}
+p {
+	display: inline;
 }
 .wrap {
 	margin-top: 3.25rem;
@@ -51,19 +67,19 @@ a:hover {
 .registerColor:hover {
 	background-color: var(--color-gold);
 }
-.heroRegister {
+#heroRegister {
 	background-color: var(--color-gold);
 	width: 10em;
 	border: 0;
 }
-.heroRegister:hover {
+#heroRegister:hover {
 	background-color: var(--color-white-bone);
 	border: 0;
 }
-.heroEmailFormRegister {
+#heroEmailFormRegister {
 	width: 20em;
 }
-.heroForm {
+#heroForm {
 	margin-top: 7em;
 }
 .scrollButton {
@@ -71,6 +87,7 @@ a:hover {
 	font-size: 2rem;
 	bottom: 1%;
 	right: 49%;
+	z-index: 500;
 }
 
 .shareIcons {
