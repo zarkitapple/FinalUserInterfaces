@@ -1,89 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="styles/main.css" />
-	<link rel="stylesheet" type="text/css" href="styles/index.css" />
-	<script
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" type="text/css" href="styles/index.css" />
+		<script
 			src="https://kit.fontawesome.com/8f1210e758.js"
 			crossorigin="anonymous"
 		></script>
-	<script src="index.html"></script>
-	<title>KATBAN</title>
-</head>
-
-<body>
-	<div class="GridContainer">
-		<header class="Header">
-			<nav class="NavBar">
-				<a class="LoginButton" href="login.html">Log In</a>
-				<a class="SignUpButton" href="signup.html">Sign Up</a>
-			</nav>
-		</header>
-		<main class="Main">
-			<section class="HeroSection">
-					<img class="LogoHero" src="resources/katlogo.png" title="Logo image">
-				<h1 class="HeroText">KATBAN the platform to ......................... </h1>
-					<form class="CallToAction">
-						<input 
-							type="email" class="EmailInput" 
-							name="email"
-							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-							title="Expected name@domain.extension"
-							placeholder="E-mail" 
-							>
-						<input
-						id="RegisterButton"
-						type="button"
-						name="Register"
-						value="Register, It's Free!">
+		<title>KATBAN</title>
+	</head>
+	<body>
+		<i class="fas fa-arrow-alt-circle-down scrollButton"></i>
+		<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+			<a href="index.html"
+				><img
+					class="navbar-brand img-fluid logoImage"
+					src="resources/katlogo.png"
+			/></a>
+			<div class="navButtonsPosition" role="group">
+				<button type="button" class="btn btn-light mr-3 loginButtonColor">
+					Log In
+				</button>
+				<button type="button" class="btn btn-light border-0 registerColor">
+					<a href="signup.html">Sign Up </a>
+				</button>
+			</div>
+		</nav>
+		<section class="container-fluid wrap vh-100 p-5 text-white text-center">
+			<div class="row justify-content-center">
+				<div class="col-5 ">
+					<h1>
+						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
+						very special place vsitors enjoy puching paul ion the face
+					</h1>
+					<h3>
+						UC3m excellence is weel know for correting the assignemtns on time
+						UC3m excellence is weel know for correting the assignemtns on time
+						UC3m excellence is weel know for correting the assignemtns on time
+					</h3>
+				</div>
+				<div class="col-3">
+					<h1>
+						KATBAN the mostr beautfil parking lot in the hole of Zamora
+					</h1>
+				</div>
+			</div>
+			<div class="form-row justify-content-center heroForm">
+				<div class="col-auto ">
+					<input
+						type="email"
+						class="form-control form-control-lg heroEmailFormRegister"
+						id="exampleFormControlInput1"
+						placeholder="name@example.com"
+					/>
+				</div>
+				<div class="col-auto ">
+					<button type="button" class="btn btn-light btn-lg heroRegister">
+						Register
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid wrap2 vh-100 p-5 text-center">
+			<div class="row justify-content-center align-center">
+				<div class="col-5 ">
+					<h1>
+						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
+						very special place vsitors enjoy puching paul ion the face
+					</h1>
+				</div>
+				<div class="col-3">
+					<h3>
+						image image image image
+					</h3>
+				</div>
+			</div>
+			<div class="row justify-content-center heroForm align-center">
+				<div class="col-5 ">
+					<h3>
+						image image image image
+					</h3>
+				</div>
+				<div class="col-3">
+					<h1>
+						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
+						very special place vsitors enjoy puching paul ion the face
+					</h1>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid ColorBackground p-3 bg-light text-center">
+			<div class="row justify-content-center align-center">
+				<div class="col-auto">
+					<p>
+						About
+					</p>
+					<p>
+						Work with us
+					</p>
+					<p>
+						Our vision
+					</p>
+					<p>
+						Tutorials
+					</p>
+				</div>
+				<div class="col-auto align-self-center ml-5">
+					<i class="fab fa-facebook-square shareIcons"></i>
+					<i class="fab fa-twitter shareIcons"></i>
+					<i class="fab fa-instagram shareIcons"></i>
+				</div>
+				<div class="col-auto align-self-center">
+					<form>
+						<select class="form-control">
+							<option>
+								English
+							</option>
+							<option>
+								Spanish
+							</option>
+							<option>
+								German
+							</option>
+							<option>
+								French
+							</option>
+						</select>
 					</form>
-			</section>
-			<i class="fas fa-arrow-alt-circle-down ScrollButton"></i>
-			<section class="Information1">
-				<h1 class="InfoText">Work with any team
-						Whether it’s for work, a side project or even the next family vacation, KATBAN helps your team stay organized.
-				</h1>
-				<img class="InfoImage" title="InfoImage">
-				<img class="InfoImage" title="InfoImage">
-				<h1 class="InfoText">Dive into the details by adding comments, attachments, due dates, and more directly to KATBAN cards. Collaborate on projects from beginning to end.
-					</h1>
-					
-			</section>
-			<section class="Information2">
-				<h1 class="InfoText">Hisuisubiub
-					skdjbskdbkjsbdkj sdjbskjdbkjsb fiubsiubsiufbiu dsfbisbdiuiuds sdiubsdibsiubs</h1>
-				<img class="InfoImage" title="InfoImage">
-				<img class="InfoImage" title="InfoImage">
-				<h1 class="InfoText">Hisuisubiubfiubsiubsiufbiu dsfbisbdiuiuds sdiubsdibsiubs
-						sdjsadbabsdkjabskdjbaksjdbad
-						asdnasbdasbdabsbkjdsbksbdkjabdkjb
-					</h1>
-			</section>
-		</main>
-		<footer class="Footer">
-			
-			<div class="FooterInfo">
-				<a>abot</a>
-				<a>work</a>
-				<a>ourorganistaio</a>
-				<a>abot</a>
-				<a>work</a>
-				<a>ourorganistaio</a>
+				</div>
 			</div>
-			<form class="LanguageDropDown">
-					<input type="text" class="LanguageInput" value="English">
-			</form>
-			<div class="FooterSocial">
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-twitter"></i>
-					<i class="fab fa-instagram"></i>
+			<div class="row justify-content-center align-center">
+				<div class="col-auto">
+					<p>© Copyright 2019. All rights reserved.</p>
+				</div>
 			</div>
-			<div class="FooterCopyright"></div>
-		</footer>
-	</div>
-</body>
-
+		</section>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

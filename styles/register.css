@@ -43,43 +43,16 @@ a:hover {
 	color: var(--color-gold);
 	text-decoration: none;
 }
-.registerColor {
-	background-color: var(--color-light-green);
-	color: black;
-	font-weight: 500;
-}
-.registerColor:hover {
-	background-color: var(--color-gold);
-}
 .heroRegister {
 	background-color: var(--color-gold);
-	width: 10em;
+	width: 100%;
 	border: 0;
 }
 .heroRegister:hover {
 	background-color: var(--color-white-bone);
 	border: 0;
 }
-.heroEmailFormRegister {
-	width: 20em;
-}
-.heroForm {
-	margin-top: 7em;
-}
-.scrollButton {
-	position: fixed;
-	font-size: 2rem;
-	bottom: 1%;
-	right: 49%;
-}
-
-.shareIcons {
-	font-size: 2rem;
-	margin-right: 1em;
-}
-.ColorBackground {
-	background-color: black;
-}
-.ColorBackground2 {
-	background-color: pink;
+.bamboo {
+	width: 90px;
+	height: 360px;
 }
