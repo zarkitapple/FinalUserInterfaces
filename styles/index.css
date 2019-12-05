@@ -1,102 +1,78 @@
-:root {
-	--color-white-bone: #f8f8f8;
-	--color-light-green: #aec957;
-	--color-beige: #e2dbac;
-	--color-green: #6e9a42;
-	--color-dark-green: #387c08;
-	--color-pine-green: #2c6705;
-	--color-gold: #ffcf40;
-}
-html {
-	scroll-behavior: smooth;
-}
-.body {
-	font-family: "Roboto", sans-serif;
-}
-.scrollBodies {
-	height: 100vh;
-	padding-top: 6vh;
-}
-.mainHeader {
-	height: 6vh;
-}
-::placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
+.navregister {
+	background-color: #ffcf40;
 	color: black;
-	opacity: 1; /* Firefox */
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-a:hover {
-	text-decoration: underline;
-	color: inherit;
-}
-p {
-	display: inline;
-}
-.wrap {
-	margin-top: 3.25rem;
-	background-color: var(--color-green);
-}
-.wrap2 {
-	background-color: var(--color-beige);
-	color: var(--color-dark-green);
-}
-
-.logoImage {
-	width: 100px;
-}
-.navButtonsPosition {
-	margin-left: auto;
-}
-.loginButtonColor {
-	color: var(--color-dark-green);
-	text-decoration: none;
-}
-.loginColor:hover {
-	color: var(--color-gold);
-	text-decoration: none;
-}
-.registerColor {
-	background-color: var(--color-light-green);
-	color: black;
-	font-weight: 500;
-}
-.registerColor:hover {
-	background-color: var(--color-gold);
-}
-#heroRegister {
-	background-color: var(--color-gold);
-	width: 10em;
 	border: 0;
 }
-#heroRegister:hover {
-	background-color: var(--color-white-bone);
-	border: 0;
+.navregister:hover {
+	background-color: #6e9a42;
+	color: #f8f8f8;
 }
-#heroEmailFormRegister {
-	width: 20em;
-}
-#heroForm {
-	margin-top: 7em;
-}
-.scrollButton {
-	position: fixed;
-	font-size: 2rem;
-	bottom: 1%;
-	right: 49%;
-	z-index: 500;
+header.wrapper {
+	position: relative;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
 }
 
-.shareIcons {
+header.wrapper h1 {
 	font-size: 2rem;
-	margin-right: 1em;
 }
-.ColorBackground {
-	background-color: black;
+
+@media (min-width: 992px) {
+	header.wrapper {
+		padding-top: 10rem;
+		padding-bottom: 13rem;
+	}
+	header.wrapper h1 {
+		font-size: 3rem;
+	}
 }
-.ColorBackground2 {
-	background-color: pink;
+
+.showcase .showcase-text {
+	padding: 3rem;
+	color: #2c6705;
+}
+
+.showcase .showcase-img {
+	min-height: 30rem;
+	background-size: cover;
+}
+
+@media (min-width: 992px) {
+	.showcase .showcase-text {
+		padding: 7rem;
+	}
+}
+
+.testimonials {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+	max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+	max-width: 12rem;
+}
+
+.call-to-action {
+	position: relative;
+	background-size: cover;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+}
+
+footer.footer {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }

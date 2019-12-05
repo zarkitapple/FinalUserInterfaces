@@ -1,15 +1,4 @@
-$("[data-toggle=popover]").popover();
-
-if (localStorage.getItem("email") != null) {
-	$("#emailInput").val(localStorage.getItem("email"));
-	localStorage.removeItem("email");
-}
 $("#heroRegister").click(function() {
-	let name = $("#usernameInput").val();
-	if (name === null) {
-		$("#usernameInput").val("Must be a valid username");
-		return;
-	}
 	let email = $("#emailInput").val();
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 	} else {
@@ -21,22 +10,33 @@ $("#heroRegister").click(function() {
 		$("#passwordInput").addClass("incorrectFormInput");
 		return;
 	}
-	let checkbox = $("#checkboxInput:checked").val();
-	if (checkbox != "on") {
-		$("#chekboxText").addClass("incorrectCheckbox");
+	sha256(email.concat(password)).then(hash => {
+		sessionStorage.setItem(1, hash);
+	});
+
+	var uuid = getCookie("userID");
+
+	if (uuid != sessionStorage.getItem("1")) {
+		console.log("fucke you");
 		return;
 	}
-	let JSONObject = {
-		userName: name,
-		userEmail: email,
-		userPassword: password
-	};
-	let myJSON = JSON.stringify(JSONObject);
-	sha256(email.concat(password)).then(hash => {
-		localStorage.setItem(hash, myJSON);
-		document.cookie = `userID= ${hash}`;
-	});
+
+	let JSONObject = JSON.parse(localStorage.getItem(uuid));
+	if (JSONObject.userEmail != email || JSONObject.userPassword != password) {
+		console.log("fuke you");
+		return;
+	}
+	location.href = "board.html";
 });
+
+function getCookie(cookiename) {
+	// Get name followed by anything except a semicolon
+	var cookiestring = RegExp("" + cookiename + "[^;]+").exec(document.cookie);
+	// Return everything after the equal sign, or an empty string if the cookie name not found
+	return decodeURIComponent(
+		!!cookiestring ? cookiestring.toString().replace(/^[^=]+./, "") : ""
+	);
+}
 
 async function sha256(message) {
 	// encode as UTF-8

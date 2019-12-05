@@ -16,6 +16,11 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" type="text/css" href="styles/index.css" />
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 		<script
 			src="https://kit.fontawesome.com/8f1210e758.js"
 			crossorigin="anonymous"
@@ -24,139 +29,253 @@
 		<title>KATBAN</title>
 	</head>
 	<body>
-		<a href="#section2"
-			><i class="fas fa-arrow-alt-circle-down scrollButton"></i
-		></a>
-		<nav
-			class="mainHeader navbar fixed-top navbar-expand-sm navbar-light bg-light"
-		>
-			<a href="index.html"
-				><img
-					class="navbar-brand img-fluid logoImage"
-					src="resources/katlogo.png"
-			/></a>
-			<div class="navButtonsPosition" role="group">
-				<button type="button" class="btn btn-light mr-3 loginButtonColor">
-					<a href="login.html">Log In </a>
-				</button>
-				<button type="button" class="btn btn-light border-0 registerColor">
-					<a href="signup.html">Sign Up </a>
-				</button>
+		<nav class="navbar bg-color-white-bone fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"
+					><img class="logoImage img-fluid" src="resources/katlogo.png"
+				/></a>
+				<div>
+					<a class="btn btn-light text-color-dark-green" href="login.html"
+						>Log In</a
+					>
+					<a class="btn btn-light navregister" href="signup.html">Sign Up</a>
+				</div>
 			</div>
 		</nav>
-		<section class="container-fluid wrap scrollBodies text-white text-center">
-			<div class="row justify-content-center">
-				<div class="col-5 ">
-					<h1>
-						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
-						very special place vsitors enjoy puching paul ion the face
-					</h1>
-					<h3>
-						UC3m excellence is weel know for correting the assignemtns on time
-						UC3m excellence is weel know for correting the assignemtns on time
-						UC3m excellence is weel know for correting the assignemtns on time
-					</h3>
-				</div>
-				<div class="col-3">
-					<h1>
-						KATBAN the mostr beautfil parking lot in the hole of Zamora
-					</h1>
+
+		<!-- Masthead -->
+		<header class="wrapper bg-color-green text-color-white-bone">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 my-auto">
+						<div>
+							<h1 class="mb-5">
+								Can't keep up with all that stuff to do? Katban will remember it
+								for you!
+							</h1>
+							<p class="lead">
+								Katban provides every user with an own agenda, allowing to
+								manage every task you may have to fullfil. Manage group work or
+								share your goals with others for free
+							</p>
+						</div>
+						<form>
+							<div class="form-row order-2">
+								<div class="col-12 col-md-9 mb-2 mb-md-0">
+									<input
+										id="heroEmailFormRegister"
+										type="email"
+										class="form-control form-control-lg"
+										placeholder="Enter your email..."
+										data-toggle="popover"
+										data-trigger="hover"
+										data-container="body"
+										data-placement="right"
+										data-content="Email must be of the form name@domain.extension"
+									/>
+								</div>
+								<div class="col-12 col-md-3">
+									<button
+										id="heroRegister"
+										type="button"
+										class="btn btn-block btn-lg registerOngreen"
+									>
+										Sign up!
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-5 mt-5">
+						<img src="resources/katlogo.png" class="img-fluid heroimage" />
+					</div>
 				</div>
 			</div>
-			<div id="heroForm" class="form-row justify-content-center">
-				<div class="col-auto ">
-					<input
-						type="email"
-						id="heroEmailFormRegister"
-						class="form-control form-control-lg"
-						name="exampleFormControlInput1"
-						placeholder="name@example.com"
-					/>
+		</header>
+		<!-- Image Showcases -->
+		<section class="showcase">
+			<div class="container-fluid bg-color-beige p-0">
+				<div class="row no-gutters">
+					<div
+						class="col-lg-6 order-lg-2 text-white showcase-img"
+						style="background-image: url('https://www.thespruce.com/thmb/m8diR1375T4yesuJD1rL3tDQG_8=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Stocksy_txp9fa5dc75B3h100_Medium_812188-59e0efdd685fbe0011f4b12e.jpg');"
+					></div>
+					<div class="col-lg-6 order-lg-1 my-auto showcase-text">
+						<h2>Intuitive board design</h2>
+						<p class="lead mb-0">
+							No matter what you are using Katban for, our boards are perfect
+							for anyone, from writing down your everyday shopping list, to
+							managing complex tasks on a more professional environment.
+						</p>
+					</div>
 				</div>
-				<div class="col-auto ">
-					<button id="heroRegister" type="button" class="btn btn-light btn-lg">
-						Register
-					</button>
+				<div class="row no-gutters">
+					<div
+						class="col-lg-6 text-white showcase-img"
+						style="background-image: url('https://s16815.pcdn.co/wp-content/uploads/2018/03/study-groups-id637873986-180329.jpg');"
+					></div>
+					<div class="col-lg-6 my-auto showcase-text">
+						<h2>Online group sharing</h2>
+						<p class="lead mb-0">
+							Need help managing a group task? Katban let's every member of your
+							group see the ongoing tasks. Our role system helps create a
+							manageable environment for the boss you hide inside, from
+							permission addition/deletion to mass alerts.
+						</p>
+					</div>
+				</div>
+				<div class="row no-gutters">
+					<div
+						class="col-lg-6 order-lg-2 text-white showcase-img"
+						style="background-image: url('https://horizondatasys.com/wp-content/uploads/2016/07/iStock_000028184736Large-copy.jpg');"
+					></div>
+					<div class="col-lg-6 order-lg-1 my-auto showcase-text">
+						<h2>Easy to Use &amp; Customize</h2>
+						<p class="lead mb-0">
+							We tried our best to make your boards as intuitive as possible,
+							but fear not! You can customize every aspect of you own home page
+							to get a look of your likes. Also you can enable or disable
+							different functionalities to get a more appropiate for your needs.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- Testimonials -->
 		<section
-			id="section2"
-			class="container-fluid wrap2 scrollBodies text-center"
+			class="testimonials text-center text-color-white-bone bg-color-green"
 		>
-			<div class="row justify-content-center align-center p-5">
-				<div class="col-5">
-					<h1>
-						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
-						very special place vsitors enjoy puching paul ion the face
-					</h1>
-				</div>
-				<div class="col-3">
-					<h3>
-						image image image image
-					</h3>
-				</div>
-			</div>
-			<div class="row justify-content-center heroForm align-center">
-				<div class="col-5 ">
-					<h3>
-						image image image image
-					</h3>
-				</div>
-				<div class="col-3">
-					<h1>
-						KATBAN the mostr beautfil parking lot in the hole of Zamora It is a
-						very special place vsitors enjoy puching paul ion the face
-					</h1>
-				</div>
-			</div>
-		</section>
-		<section class="container-fluid ColorBackground p-3 bg-light text-center">
-			<div class="row justify-content-center align-center">
-				<div class="col-auto p-1">
-					<p class="m-1">
-						About
-					</p>
-					<p class="m-1">
-						Work with us
-					</p>
-					<p class="m-1">
-						Our vision
-					</p>
-					<p class="m-1">
-						Tutorials
-					</p>
-				</div>
-				<div class="col-auto align-self-center ml-5">
-					<i class="fab fa-facebook-square shareIcons"></i>
-					<i class="fab fa-twitter shareIcons"></i>
-					<i class="fab fa-instagram shareIcons"></i>
-				</div>
-				<div class="col-auto align-self-center">
-					<form>
-						<select class="form-control">
-							<option>
-								English
-							</option>
-							<option>
-								Spanish
-							</option>
-							<option>
-								German
-							</option>
-							<option>
-								French
-							</option>
-						</select>
-					</form>
-				</div>
-			</div>
-			<div class="row justify-content-center align-center">
-				<div class="col-auto">
-					<p>© Copyright 2019. All rights reserved.</p>
+			<div class="container">
+				<h2 class="mb-5">What others think of Katban</h2>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
+							<img
+								class="img-fluid rounded-circle mb-3"
+								src="resources/person1.png"
+								alt="Person Image"
+							/>
+							<h5>Jimmy H.</h5>
+							<p class="font-weight-light mb-0">
+								"Better than Trello"
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
+							<img
+								class="img-fluid rounded-circle mb-3"
+								src="resources/person2.jpg"
+								alt="Person Image"
+							/>
+							<h5>Johanna S.</h5>
+							<p class="font-weight-light mb-0">
+								"This is so nice. Katban helps me organize everything so I don't
+								miss a thing!"
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
+							<img
+								class="img-fluid rounded-circle mb-3"
+								src="resources/person3.png"
+								alt="Person Image"
+							/>
+							<h5>John D.</h5>
+							<p class="font-weight-light mb-0">
+								"Easy, useful, free. Thats what Katban stands for"
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- Call to Action -->
+		<section class="call-to-action bg-color-beige text-black text-center">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<h2 class="mb-4 text-color-dark-green">
+							Ready to get started? Sign up now!
+						</h2>
+					</div>
+					<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+						<form>
+							<div class="form-row">
+								<div class="col-12 col-md-9 mb-2 mb-md-0">
+									<input
+										type="email"
+										class="form-control form-control-lg"
+										placeholder="Enter your email..."
+									/>
+								</div>
+								<div class="col-12 col-md-3">
+									<button
+										type="submit"
+										class="btn btn-block btn-lg navregister"
+									>
+										Sign up!
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer bg-color-white-bone">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+						<ul class="list-inline mb-2">
+							<li class="list-inline-item">
+								<a href="#">About</a>
+							</li>
+							<li class="list-inline-item ">&sdot;</li>
+							<li class="list-inline-item">
+								<a href="#">Terms of use</a>
+							</li>
+							<li class="list-inline-item">&sdot;</li>
+							<li class="list-inline-item">
+								<a href="#">Contact</a>
+							</li>
+							<li class="list-inline-item">&sdot;</li>
+							<li class="list-inline-item">
+								<a href="#">Privacy</a>
+							</li>
+						</ul>
+						<p class="text-muted small mb-4 mb-lg-0">
+							&copy; KATBAN 2019. All Rights Reserved.
+						</p>
+					</div>
+					<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+						<ul class="list-inline mb-0">
+							<li class="list-inline-item mr-3">
+								<a href="#">
+									<i class="fab fa-facebook fa-2x fa-fw"></i>
+								</a>
+							</li>
+							<li class="list-inline-item mr-3">
+								<a href="#">
+									<i class="fab fa-twitter-square fa-2x fa-fw"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="fab fa-instagram fa-2x fa-fw"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script

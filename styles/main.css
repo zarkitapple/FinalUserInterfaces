@@ -1,0 +1,88 @@
+/* We will use this file to specify our styles */
+
+.text-color-white-bone {
+	color: #f8f8f8;
+}
+.text-color-light-green {
+	color: #aec957;
+}
+.text-color-beige {
+	color: #e2dbac;
+}
+.text-color-green {
+	color: #6e9a42;
+}
+.text-color-dark-green {
+	color: #387c08;
+}
+.text-color-pine-green {
+	color: #2c6705;
+}
+.text-color-gold {
+	color: #ffcf40;
+}
+.bg-color-white-bone {
+	background-color: #f8f8f8;
+}
+.bg-color-light-green {
+	background-color: #aec957;
+}
+.bg-color-beige {
+	background-color: #e2dbac;
+}
+.bg-color-green {
+	background-color: #6e9a42;
+}
+.bg-color-dark-green {
+	background-color: #387c08;
+}
+.bg-color-pine-green {
+	background-color: #2c6705;
+}
+.bg-color-gold {
+	background-color: #ffcf40;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: #387c08;
+}
+.logoImage {
+	width: 100px;
+}
+.verticalAlign {
+	display: flex;
+	align-items: center;
+}
+
+.registerOngreen {
+	background-color: #ffcf40;
+	color: black;
+	border: 0;
+}
+.registerOngreen:hover {
+	background-color: #f8f8f8;
+	color: black;
+}

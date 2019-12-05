@@ -1,102 +1,76 @@
-:root {
-	--color-white-bone: #f8f8f8;
-	--color-light-green: #aec957;
-	--color-beige: #e2dbac;
-	--color-green: #6e9a42;
-	--color-dark-green: #387c08;
-	--color-pine-green: #2c6705;
-	--color-gold: #ffcf40;
-}
-::placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
+.navregister {
+	background-color: #ffcf40;
 	color: black;
-	opacity: 1; /* Firefox */
+	border: 0;
 }
-html,
-body {
-	height: 100%;
+.navregister:hover {
+	background-color: #6e9a42;
+	color: #f8f8f8;
 }
-.full-height {
-	height: 100%;
-	height: -moz-calc(100vh - 56px);
-	height: -webkit-calc(100vh - 56px);
-	height: -o-calc(100vh - 56px);
-	height: calc(100vh - 56px);
-}
-.body {
-	font-family: "Roboto", sans-serif;
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-a:hover {
-	text-decoration: underline;
-	color: inherit;
-}
-p {
-	display: inline;
-}
-.mainBody {
-	height: 90vh;
-}
-.loginMain {
-	margin-top: 8vh;
-}
-.wrap {
-	margin-top: 3.25rem;
-	background-color: var(--color-green);
-}
-.wrap2 {
-	background-color: var(--color-beige);
-	color: var(--color-dark-green);
+.wrapper {
+	position: relative;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 }
 
-.logoImage {
-	width: 100px;
+.wrapper h1 {
+	font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		padding-top: 6rem;
+		padding-bottom: 13rem;
+	}
+	.wrapper h1 {
+		font-size: 3rem;
+	}
 }
 .mainLogo {
-	width: 15vw;
-}
-.navButtonsPosition {
-	margin-left: auto;
-}
-.loginButtonColor {
-	color: var(--color-dark-green);
-	text-decoration: none;
-}
-.loginColor:hover {
-	color: var(--color-gold);
-	text-decoration: none;
-}
-#heroRegister {
-	background-color: var(--color-gold);
-	width: 100%;
-	border: 0;
-}
-#heroRegister:hover {
-	background-color: var(--color-white-bone);
-	border: 0;
+	width: 400px;
 }
 .bamboo {
-	width: 5vw;
-	height: 55vh;
+	width: 85px;
+	height: 540px;
+	position: relative;
+	z-index: 3;
 }
 .bambooLogin {
-	width: 4.5vw;
-	height: 43vh;
-}
-.front {
-	z-index: 3;
+	width: 80px;
+	height: 480px;
 	position: relative;
+	z-index: 3;
 }
-.shareIcons {
-	font-size: 2rem;
-	margin-right: 1em;
+
+@media (max-width: 992px) {
+	.bamboo {
+		display: none;
+	}
+	.bambooLogin {
+		display: none;
+	}
 }
-.bgLightGreen {
-	background-color: var(--color-light-green);
+footer.footer {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
-.bgGreen {
-	background-color: var(--color-green);
+.navregister {
+	background-color: #ffcf40;
+	color: black;
+	border: 0;
+}
+.navregister:hover {
+	background-color: #6e9a42;
+	color: #f8f8f8;
+}
+.incorrectFormInput {
+	background-color: rgb(252, 150, 150);
+	border: 0;
+}
+.incorrectCheckbox {
+	border: 2px rgb(255, 100, 100) solid;
+	background-color: rgb(252, 150, 150);
+	color: black;
+	padding: 1rem;
+	border-radius: 5px;
 }
