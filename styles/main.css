@@ -73,9 +73,7 @@ a {
 a:hover {
 	color: #387c08;
 }
-.logoImage {
-	width: 100px;
-}
+
 .verticalAlign {
 	display: flex;
 	align-items: center;

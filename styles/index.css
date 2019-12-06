@@ -9,10 +9,15 @@
 	color: #f8f8f8;
 }
 
+.logo-image
+{
+	height: 2.75rem;
+	width: auto;
+}
+
 header.wrapper {
-	position: relative;
-	padding-top: 8rem;
-	padding-bottom: 8rem;
+	padding-top: calc(2.75rem + 2rem * 2 + 3rem);
+	padding-bottom: 3rem;
 }
 
 header.wrapper h1 {
@@ -21,28 +26,30 @@ header.wrapper h1 {
 
 @media (min-width: 992px) {
 	header.wrapper {
-		padding-top: 10rem;
-		padding-bottom: 13rem;
+		padding-top: calc(2.75rem + 2rem * 2 + 8rem);
+		padding-bottom: 8rem;
 	}
+	
 	header.wrapper h1 {
 		font-size: 3rem;
 	}
 }
 
+.drop-shadow
+{
+	background-image: linear-gradient(to bottom, rgba(0, 0, 20, 0.1), transparent 5%); 
+}
+
 .showcase .showcase-text {
-	padding: 3rem;
 	color: #2c6705;
+	margin: auto 0;
+	height: 100%;
+	padding: 0 6rem;
 }
 
 .showcase .showcase-img {
 	min-height: 30rem;
 	background-size: cover;
-}
-
-@media (min-width: 992px) {
-	.showcase .showcase-text {
-		padding: 7rem;
-	}
 }
 
 .testimonials {
