@@ -20,8 +20,8 @@ $("#heroRegister").click(function() {
 		return;
 	}
 	sha256(email.concat(password)).then(hash => {
-		sessionStorage.setItem(1, hash);
-	});
+		sessionStorage.setItem("1", hash);
+	}).then( () => {
 	let uuidInput = sessionStorage.getItem("1");
 	let userInfo=checkUser(uuidInput,email,password);
 	if (userInfo==null){
@@ -33,6 +33,7 @@ $("#heroRegister").click(function() {
 		document.cookie = `remember=${userInfo.userName}; expires=Thu, 20 Dec 2019 12:00:00 UTC`;
 	}
 	location.href = "board.html";
+})
 });
 
 function checkUser(uuidInput,email,password) {
@@ -48,7 +49,6 @@ function checkUser(uuidInput,email,password) {
 }
 
 function isLoggedIn (value) {
-	console.log(value);
 	if (value==""){
 		return false;
 	}

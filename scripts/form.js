@@ -35,6 +35,7 @@ $("#heroRegister").click(function() {
 	sha256(email.concat(password)).then(hash => {
 		localStorage.setItem(hash, myJSON);
 	});
+	location.href = "login.html"
 });
 
 async function sha256(message) {
