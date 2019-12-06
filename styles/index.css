@@ -3,10 +3,12 @@
 	color: black;
 	border: 0;
 }
+
 .navregister:hover {
 	background-color: #6e9a42;
 	color: #f8f8f8;
 }
+
 header.wrapper {
 	position: relative;
 	padding-top: 8rem;

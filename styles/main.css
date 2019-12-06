@@ -1,5 +1,9 @@
 /* We will use this file to specify our styles */
 
+.text-color-white {
+	color: #ffffff;
+}
+
 .text-color-white-bone {
 	color: #f8f8f8;
 }
