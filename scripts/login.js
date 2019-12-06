@@ -23,7 +23,7 @@ $("#heroRegister").click(function() {
 		sessionStorage.setItem(1, hash);
 	});
 	let uuidInput = sessionStorage.getItem("1");
-	let userInfo=checkUser(uuidInput,email,password)
+	let userInfo=checkUser(uuidInput,email,password);
 	if (userInfo==null){
 		$('#userDoesNotexist').modal();
 		return;
