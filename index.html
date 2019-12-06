@@ -38,7 +38,7 @@
 					<a class="btn btn-light text-color-dark-green" href="login.html"
 						>Log In</a
 					>
-					<a class="btn btn-light navregister" href="signup.html">Sign Up</a>
+					<a class="btn btn-light " href="signup.html">Sign Up</a>
 				</div>
 			</div>
 		</nav>
@@ -47,7 +47,7 @@
 		<header class="wrapper bg-color-green text-color-white-bone">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7 my-auto">
+					<div class="col-lg-7 my-auto order-lg-1 order-2">
 						<div>
 							<h1 class="mb-5">
 								Can't keep up with all that stuff to do? Katban will remember it
@@ -60,7 +60,7 @@
 							</p>
 						</div>
 						<form>
-							<div class="form-row order-2">
+							<div class="form-row">
 								<div class="col-12 col-md-9 mb-2 mb-md-0">
 									<input
 										id="heroEmailFormRegister"
@@ -68,9 +68,9 @@
 										class="form-control form-control-lg"
 										placeholder="Enter your email..."
 										data-toggle="popover"
-										data-trigger="hover"
+										data-trigger="focus"
 										data-container="body"
-										data-placement="right"
+										data-placement="bottom"
 										data-content="Email must be of the form name@domain.extension"
 									/>
 								</div>
@@ -86,7 +86,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-lg-5 mt-5">
+					<div class="col-lg-5 mt-5 mb-5 order-lg-2 order-1">
 						<img src="resources/katlogo.png" class="img-fluid heroimage" />
 					</div>
 				</div>
@@ -97,7 +97,7 @@
 			<div class="container-fluid bg-color-beige p-0">
 				<div class="row no-gutters">
 					<div
-						class="col-lg-6 order-lg-2 text-white showcase-img"
+						class="col-lg-6 order-lg-2 text-white img-fluid showcase-img"
 						style="background-image: url('https://www.thespruce.com/thmb/m8diR1375T4yesuJD1rL3tDQG_8=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Stocksy_txp9fa5dc75B3h100_Medium_812188-59e0efdd685fbe0011f4b12e.jpg');"
 					></div>
 					<div class="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -111,7 +111,7 @@
 				</div>
 				<div class="row no-gutters">
 					<div
-						class="col-lg-6 text-white showcase-img"
+						class="col-lg-6 text-white img-fluid showcase-img"
 						style="background-image: url('https://s16815.pcdn.co/wp-content/uploads/2018/03/study-groups-id637873986-180329.jpg');"
 					></div>
 					<div class="col-lg-6 my-auto showcase-text">
@@ -126,7 +126,7 @@
 				</div>
 				<div class="row no-gutters">
 					<div
-						class="col-lg-6 order-lg-2 text-white showcase-img"
+						class="col-lg-6 order-lg-2 text-white img-fluid showcase-img"
 						style="background-image: url('https://horizondatasys.com/wp-content/uploads/2016/07/iStock_000028184736Large-copy.jpg');"
 					></div>
 					<div class="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -208,15 +208,23 @@
 							<div class="form-row">
 								<div class="col-12 col-md-9 mb-2 mb-md-0">
 									<input
+										id="heroEmailFormRegister2"
 										type="email"
 										class="form-control form-control-lg"
 										placeholder="Enter your email..."
+										data-toggle="popover"
+										data-trigger="focus"
+										data-container="body"
+										data-placement="bottom"
+										data-content="Email must be of the form name@domain.extension"
 									/>
 								</div>
 								<div class="col-12 col-md-3">
 									<button
-										type="submit"
+										id="heroRegister2"
+										type="button"
 										class="btn btn-block btn-lg navregister"
+										
 									>
 										Sign up!
 									</button>

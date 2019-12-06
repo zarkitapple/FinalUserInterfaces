@@ -34,7 +34,6 @@ $("#heroRegister").click(function() {
 	let myJSON = JSON.stringify(JSONObject);
 	sha256(email.concat(password)).then(hash => {
 		localStorage.setItem(hash, myJSON);
-		document.cookie = `userID= ${hash}`;
 	});
 });
 
