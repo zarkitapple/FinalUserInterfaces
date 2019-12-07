@@ -1,3 +1,12 @@
+
+if(isLoggedIn(getCookie("remember"))){
+	$('#alreadyLoggedIn').modal();
+	let userName = getCookie("remember");
+	var modal = $("#alreadyLoggedIn");
+	modal.find(".modal-title").text("You are already signed in as : " + userName);
+	modal.find(".modal-body").text("Would you like to go to your board ?")
+}
+$("[data-toggle=popover]").popover();
 $("#heroRegister").click(function() {
 	let email = $("#emailInput").val();
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -11,23 +20,43 @@ $("#heroRegister").click(function() {
 		return;
 	}
 	sha256(email.concat(password)).then(hash => {
-		sessionStorage.setItem(1, hash);
-	});
-
-	var uuid = getCookie("userID");
-
-	if (uuid != sessionStorage.getItem("1")) {
-		console.log("fucke you");
+		sessionStorage.setItem("1", hash);
+	}).then( () => {
+	let uuidInput = sessionStorage.getItem("1");
+	let userInfo=checkUser(uuidInput,email,password);
+	if (userInfo==null){
+		$('#userDoesNotexist').modal();
 		return;
 	}
-
-	let JSONObject = JSON.parse(localStorage.getItem(uuid));
-	if (JSONObject.userEmail != email || JSONObject.userPassword != password) {
-		console.log("fuke you");
-		return;
+	let checkbox = $("#checkboxInput:checked").val();
+	if (checkbox == "on") {
+		document.cookie = `remember=${userInfo.userName}; expires=Thu, 20 Dec 2019 12:00:00 UTC`;
 	}
 	location.href = "board.html";
+})
 });
+
+function checkUser(uuidInput,email,password) {
+	let uuid = localStorage.getItem(uuidInput);
+	if(uuid==null){
+		return null;
+	}
+	let JSONObject = JSON.parse(uuid);
+	if (JSONObject.userEmail != email || JSONObject.userPassword != password) {
+		return null;
+	}
+	return JSONObject;
+}
+
+function isLoggedIn (value) {
+	if (value==""){
+		return false;
+	}
+	else if(value!=null){
+		return true
+	}
+	return false;
+}
 
 function getCookie(cookiename) {
 	// Get name followed by anything except a semicolon

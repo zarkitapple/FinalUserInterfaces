@@ -1,0 +1,35 @@
+.userRounded {
+    width: 40px;
+}
+.navLeft{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 100%;
+    padding-top: 5rem;
+}
+
+.navBox{
+    width: 3rem;
+    height: 2.5rem;
+    text-align: center;
+    background-image: url("/resources/bamboo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.imageBoard {
+    width: 24px;
+
+}
+.navIcon {
+    font-size: 1.5rem ;
+
+}
+.wrapper {
+    margin-left: 4rem;
+    padding-top: 5rem;
+}
