@@ -1,18 +1,12 @@
-.navregister {
+.nav-register {
 	background-color: #ffcf40;
 	color: black;
 	border: 0;
 }
 
-.navregister:hover {
+.nav-register:hover {
 	background-color: #6e9a42;
 	color: #f8f8f8;
-}
-
-.logo-image
-{
-	height: 2.75rem;
-	width: auto;
 }
 
 header.wrapper {
@@ -40,12 +34,6 @@ header.wrapper h1 {
 	text-shadow: 2px 2px 4px #302f00b4;
 }
 
-.container-drop-shadow
-{
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent 0.75rem);
-	z-index: 1;
-}
-
 .navbar-drop-shadow
 {
 	height: 1rem;
@@ -64,7 +52,6 @@ header.wrapper h1 {
 .showcase .showcase-img {
 	min-height: 30rem;
 	background-size: cover;
-	z-index: 1;
 }
 
 .showcase-bg-1

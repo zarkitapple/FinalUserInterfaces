@@ -19,8 +19,7 @@
 
 @media (min-width: 992px) {
 	.wrapper {
-		padding-top: 6rem;
-		padding-bottom: 13rem;
+		padding: 6rem 0;
 	}
 	.wrapper h1 {
 		font-size: 3rem;

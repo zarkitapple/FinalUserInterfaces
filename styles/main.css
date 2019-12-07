@@ -88,3 +88,9 @@ a:hover {
 	background-color: #f8f8f8;
 	color: black;
 }
+
+.logo-image
+{
+	height: 2.75rem;
+	width: auto;
+}
