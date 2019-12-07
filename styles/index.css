@@ -1,16 +1,21 @@
-.navregister {
+.nav-register {
 	background-color: #ffcf40;
 	color: black;
 	border: 0;
 }
-.navregister:hover {
+
+.nav-register:hover {
 	background-color: #6e9a42;
 	color: #f8f8f8;
 }
+
 header.wrapper {
-	position: relative;
-	padding-top: 8rem;
-	padding-bottom: 8rem;
+	padding-top: calc(2.75rem + 2rem * 1.5 + 6rem);
+	padding-bottom: 6rem;
+	background-image: url('../resources/forest.png');
+	background-size: auto 100%;
+	background-position: center bottom;
+	background-attachment: fixed;
 }
 
 header.wrapper h1 {
@@ -18,18 +23,30 @@ header.wrapper h1 {
 }
 
 @media (min-width: 992px) {
-	header.wrapper {
-		padding-top: 10rem;
-		padding-bottom: 13rem;
-	}
+	
 	header.wrapper h1 {
 		font-size: 3rem;
 	}
 }
 
+.text-drop-shadow
+{
+	text-shadow: 2px 2px 4px #302f00b4;
+}
+
+.navbar-drop-shadow
+{
+	height: 1rem;
+	padding: 0;
+	margin-top: calc(2.75rem + 2rem * 1.5);
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent 0.75rem);
+}
+
 .showcase .showcase-text {
-	padding: 3rem;
 	color: #2c6705;
+	margin: auto 0;
+	height: 100%;
+	padding: 0 6rem;
 }
 
 .showcase .showcase-img {
@@ -37,15 +54,43 @@ header.wrapper h1 {
 	background-size: cover;
 }
 
-@media (min-width: 992px) {
-	.showcase .showcase-text {
-		padding: 7rem;
-	}
+.showcase-bg-1
+{
+	background-image: url('../resources/clipboard-list-solid.png');
+	background-position: bottom left;
+	background-size: 23rem;
+	background-repeat: no-repeat;
+}
+
+.showcase-bg-2
+{
+	background-image: url('../resources/users-solid.png');
+	background-position: bottom right;
+	background-size: 35rem;
+	background-repeat: no-repeat;
+}
+
+.showcase-bg-3
+{
+	background-image: url('../resources/swatchbook-solid.png');
+	background-position: bottom left;
+	background-size: 31rem;
+	background-repeat: no-repeat;
+}
+
+.line-pointer
+{
+	width: 75%;
+	height: 0.25rem;
+	border-radius: 100rem;
+	right: 0;
 }
 
 .testimonials {
-	padding-top: 7rem;
-	padding-bottom: 7rem;
+	padding: 3.5rem 0;
+	background-image: url('../resources/vertical-stripes.png');
+	background-size: auto 100%;
+	background-attachment: fixed;
 }
 
 .testimonials .testimonial-item {

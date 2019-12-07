@@ -1,5 +1,9 @@
 /* We will use this file to specify our styles */
 
+.text-color-white {
+	color: #ffffff;
+}
+
 .text-color-white-bone {
 	color: #f8f8f8;
 }
@@ -69,9 +73,7 @@ a {
 a:hover {
 	color: #387c08;
 }
-.logoImage {
-	width: 100px;
-}
+
 .verticalAlign {
 	display: flex;
 	align-items: center;
@@ -85,4 +87,10 @@ a:hover {
 .registerOngreen:hover {
 	background-color: #f8f8f8;
 	color: black;
+}
+
+.logo-image
+{
+	height: 2.75rem;
+	width: auto;
 }
