@@ -1,4 +1,6 @@
-$("[data-toggle=popover]").popover();
+if (window.matchMedia("(min-width: 1000px)").matches) {
+	$("[data-toggle=popover]").popover();
+}
 
 if (localStorage.getItem("email") != null) {
 	$("#emailInput").val(localStorage.getItem("email"));
@@ -35,7 +37,7 @@ $("#heroRegister").click(function() {
 	sha256(email.concat(password)).then(hash => {
 		localStorage.setItem(hash, myJSON);
 	});
-	location.href = "login.html"
+	location.href = "login.html";
 });
 
 async function sha256(message) {

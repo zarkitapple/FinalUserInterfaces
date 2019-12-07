@@ -1,273 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="styles/board.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/8f1210e758.js"
+			crossorigin="anonymous"
+		></script>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-	<link rel="stylesheet" type="text/css" href="styles/board.css" />
-	<link rel="stylesheet" type="text/css" href="styles/main.css" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-	<script src="https://kit.fontawesome.com/8f1210e758.js" crossorigin="anonymous"></script>
+		<title>Your board</title>
+	</head>
 
-	<title>Your board</title>
-</head>
-
-<body>
-	<nav class="navbar bg-color-white-bone fixed-top">
-		<a class="navbar-brand" href="index.html"><img class="logoImage img-fluid" src="resources/katlogo.png" /></a>
-		<div class="wrapper2">
-			<div>
-				<i class="fas fa-ellipsis-h mr-2"></i>
-				<i class="fas fa-bell mr-2"></i>
+	<body>
+		<nav class="navbar bg-color-white-bone fixed-top">
+			<a class="navbar-brand" href="index.html"
+				><img class="boardLogo img-fluid" src="resources/katlogo.png"
+			/></a>
+			<div class="wrapper2">
+				<div>
+					<i class="fas fa-ellipsis-h mr-2"></i>
+					<i class="fas fa-bell mr-2"></i>
+				</div>
+				<div class="nav-item">
+					<img
+						class="img-fluid rounded-circle userRounded dropdown-toggle"
+						id="navbarDropdown"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+						src="resources/person1.png"
+						alt="Person Image"
+					/>
+					<div
+						class="dropdown-menu dropdown-menu-right text-center"
+						aria-labelledby="navbarDropdown"
+					>
+						<a class="dropdown-item" href="#">My profile</a>
+						<a class="dropdown-item" href="#">Help</a>
+						<div class="dropdown-divider"></div>
+						<button
+							type="button"
+							id="logOutButton"
+							class="btn btn-light bg-color-light-green"
+						>
+							Log out
+						</button>
+					</div>
+				</div>
 			</div>
-			<div class="nav-item">
-				<img class="img-fluid rounded-circle userRounded dropdown-toggle" id="navbarDropdown"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="resources/person1.png"
-					alt="Person Image" />
-				<div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">My profile</a>
-					<a class="dropdown-item" href="#">Help</a>
+		</nav>
+		<div class="boardHeader">
+			<div class="navbar boardTitle bg-color-light-green text-color-pine-green">
+				<h3 class="font-weight-bold">Tofu shooter game</h3>
+				<div class="wrapper3">
+					<img
+						class="img-fluid rounded-circle userRounded mr-2"
+						src="resources/person3.png"
+						alt="participant1"
+					/>
+					<img
+						class="img-fluid rounded-circle userRounded mr-2"
+						src="resources/person2.jpg"
+						alt="participant2"
+					/>
+					<i class="fas fa-users participantsIcon"></i>
+				</div>
+			</div>
+		</div>
+		<ul class="nav flex-column align-items-center navLeft">
+			<li class="navBox dropright">
+				<img
+					class="img-fluid imageBoard dropdown-toggle"
+					id="dropdownMenuOffset"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					data-offset="-15,16"
+					src="resources/board.png"
+				/>
+				<div
+					class="dropdown-menu bg-color-pine-green p-2"
+					aria-labelledby="dropdownMenuOffset"
+				>
+					<h4 class="text-color-white-bone ">Boards</h4>
+					<div class="sideBarText text-color-white-bone mb-n1">
+						<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+						<h6>Favourite boards</h6>
+					</div>
+					<div class="dropdown-divider "></div>
+					<div class="sideBarOverflow overflow-auto mb-3">
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+					</div>
+					<div class="sideBarText text-color-white-bone">
+						<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+						<h6>Recent Boards</h6>
+					</div>
 					<div class="dropdown-divider"></div>
-					<button type="button" id="logOutButton" class="btn btn-light bg-color-light-green">Log out</button>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<div class="boardHeader">
-		<div class="navbar boardTitle bg-color-light-green text-color-pine-green">
-			<h3 class="font-weight-bold">Tofu shooter game</h3>
-			<div class="wrapper3">
-				<img class="img-fluid rounded-circle userRounded mr-2" src="resources/person3.png" alt="participant1" />
-				<img class="img-fluid rounded-circle userRounded mr-2" src="resources/person2.jpg" alt="participant2" />
-				<i class="fas fa-users participantsIcon"></i>
-			</div>
-		</div>
-	</div>
-	<ul class="nav flex-column align-items-center navLeft">
-		<li class="navBox dropright">
-			<img class="img-fluid imageBoard dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
-				aria-haspopup="true" aria-expanded="false" data-offset="-15,16" src="resources/board.png">
-			<div class="dropdown-menu bg-color-pine-green p-2" aria-labelledby="dropdownMenuOffset">
-				<h4 class="text-color-white-bone ">Boards</h4>
-				<div class="sideBarText text-color-white-bone mb-n1">
-					<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
-					<h6> Favourite boards</h6>
-				</div>
-				<div class="dropdown-divider "></div>
-				<div class="sideBarOverflow overflow-auto mb-3">
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-
-				</div>
-				<div class="sideBarText text-color-white-bone">
-					<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
-					<h6> Recent Boards</h6>
-				</div>
-				<div class="dropdown-divider"></div>
-				<div class="sideBarOverflow overflow-auto mb-2">
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
-						href="#">Action</button>
-					<button type="button" class="btn btn-light bg-color-light-green sideBarButton"
-						href="#">Action</button>
-				</div>
-			</div>
-		</li>
-		<li class="navBox dropright">
-			<i class="fas fa-search navIcon text-color-white-bone" id="searchDropdown" data-toggle="dropdown"
-				aria-haspopup="true" aria-expanded="false" data-offset="-15,16"></i>
-			<div class="dropdown-menu p-2 bg-color-pine-green text-color-white-bone ">
-				<form class="">
-					<div class="form-group">
-						<input type="text" class="form-control mb-1" id="search" placeholder="search">
-						<button type="button" class="btn btn-light registerOngreen">Search</button>
-					</div>
-				</form>
-				<div class="dropdown-divider "></div>
-				<h6> Recent search</h6>
-				<a class="dropdown-item text-color-white-bone " href="#">Amsosd</a>
-				<a class="dropdown-item text-color-white-bone " href="#">sasiduaiu</a>
-			</div>
-		</li>
-		<li class="navBox">
-			<i class="fas fa-plus navIcon text-color-white-bone"></i>
-
-		</li>
-		<li class="navBox">
-
-			<i class="fas fa-history navIcon text-color-white-bone"></i>
-		</li>
-		<li class="navBox">
-			<i class="fas fa-cog navIcon text-color-white-bone"></i>
-		</li class="navBamboo">
-		<img class="navBamboo" src="resources/bamboolong.png">
-		</li>
-	</ul>
-	<div class="boardMain bg-dark">
-		<ul class="List bg-light overflow-auto">
-			<div class="ListHeader bg-danger">
-				<h4 class="ListHeaderText">list 1</h4>
-				<i class="fas fa-bars ListOptions"></i>
-			</div>
-
-			<div class="Events">
-				<div class="card">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
+					<div class="sideBarOverflow overflow-auto mb-2">
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton mb-2"
+							href="#"
+						>
+							Action
+						</button>
+						<button
+							type="button"
+							class="btn btn-light bg-color-light-green sideBarButton"
+							href="#"
+						>
+							Action
+						</button>
 					</div>
 				</div>
-				<div class="card Event">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-				<div class="card Event">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-			</div>
-			<div class="ListFooter bg-danger">
-				<h5 class="ListFooterText">Add a new event</h5>
-				<i class="fas fa-plus ListFooterOption"></i>
-			</div>
-		</ul>
-		<ul class="List bg-light overflow-auto">
-			<div class="ListHeader bg-danger">
-				<h4 class="ListHeaderText">list 1</h4>
-				<i class="fas fa-bars ListOptions"></i>
-			</div>
-			<div class="Events">
-				<div class="card">
-					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
-					<div class="card-header">
-						<h5 class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer</h5>
-					</div>
-					<div class="card-body EventItems">
-
-
-
-						<div class="EventDateComments">
-							<div class="badge badge-warning EventItem">20/2/2020</div>
-							<i class="fas fa-comment EventItem">
-
-							</i>
-							<span class="badge badge-success EventItem">4</span>
-
+			</li>
+			<li class="navBox dropright">
+				<i
+					class="fas fa-search navIcon text-color-white-bone"
+					id="searchDropdown"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					data-offset="-15,16"
+				></i>
+				<div
+					class="dropdown-menu p-2 bg-color-pine-green text-color-white-bone "
+				>
+					<form class="">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control mb-1"
+								id="search"
+								placeholder="search"
+							/>
+							<button type="button" class="btn btn-light registerOngreen">
+								Search
+							</button>
 						</div>
-						<i class="fas fa-edit EditEvent EventItem"></i>
-					</div>
-
+					</form>
+					<div class="dropdown-divider "></div>
+					<h6>Recent search</h6>
+					<a class="dropdown-item text-color-white-bone " href="#">Amsosd</a>
+					<a class="dropdown-item text-color-white-bone " href="#">sasiduaiu</a>
 				</div>
-
-			</div>
+			</li>
+			<li class="navBox">
+				<i class="fas fa-plus navIcon text-color-white-bone"></i>
+			</li>
+			<li class="navBox">
+				<i class="fas fa-history navIcon text-color-white-bone"></i>
+			</li>
+			<li class="navBox">
+				<i class="fas fa-cog navIcon text-color-white-bone"></i>
+			</li>
+			<img class="navBamboo" src="resources/bamboolong.png" />
 		</ul>
-		<ul class="List bg-light overflow-auto">
-			<div class="ListHeader bg-danger">
-				<h4 class="ListHeaderText">list 1</h4>
-				<i class="fas fa-bars ListOptions"></i>
-			</div>
-
-			<div class="Events">
-				<div class="card">
-					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-					</div>
-				</div>
-				<div class="card Event">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
-					</div>
+		<div class="boardMain bg-dark">
+			<ul class="List bg-light overflow-auto">
+				<div class="ListHeader bg-danger">
+					<h4 class="ListHeaderText">list 1</h4>
+					<i class="fas fa-bars ListOptions"></i>
 				</div>
 
-			</div>
-		</ul>
-		<ul class="List bg-light overflow-auto">
-			<div class="ListHeader bg-danger">
-				<h4 class="ListHeaderText">list 1</h4>
-				<i class="fas fa-bars ListOptions"></i>
-			</div>
-
-			<div class="Events">
-				<div class="card">
-					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
+				<div class="Events">
+					<div class="card">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
+					</div>
+					<div class="card Event">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
+					</div>
+					<div class="card Event">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="card Event">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
+				<div class="ListFooter bg-danger">
+					<h5 class="ListFooterText">Add a new event</h5>
+					<i class="fas fa-plus ListFooterOption"></i>
+				</div>
+			</ul>
+			<ul class="List bg-light overflow-auto">
+				<div class="ListHeader bg-danger">
+					<h4 class="ListHeaderText">list 1</h4>
+					<i class="fas fa-bars ListOptions"></i>
+				</div>
+				<div class="Events">
+					<div class="card">
+						<img
+							src="/resources/person1.png"
+							class="card-img-top cardImageSize"
+							alt="..."
+						/>
+						<div class="card-header">
+							<h5 class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer
+							</h5>
+						</div>
+						<div class="card-body EventItems">
+							<div class="EventDateComments">
+								<div class="badge badge-warning EventItem">20/2/2020</div>
+								<i class="fas fa-comment EventItem"> </i>
+								<span class="badge badge-success EventItem">4</span>
+							</div>
+							<i class="fas fa-edit EditEvent EventItem"></i>
+						</div>
 					</div>
 				</div>
-
-			</div>
-		</ul>
-		<ul class="List bg-light overflow-auto">
-			<div class="ListHeader bg-danger">
-				<h4 class="ListHeaderText">list 1</h4>
-				<i class="fas fa-bars ListOptions"></i>
-			</div>
-
-			<div class="Events">
-				<div class="card">
-					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-					</div>
-				</div>
-				<div class="card Event">
-					<img src="/resources/person1.png" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-							additional content. This content is a little bit longer.</p>
-					</div>
+			</ul>
+			<ul class="List bg-light overflow-auto">
+				<div class="ListHeader bg-danger">
+					<h4 class="ListHeaderText">list 1</h4>
+					<i class="fas fa-bars ListOptions"></i>
 				</div>
 
-			</div>
-		</ul>
-	</div>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
-	<script src="scripts/board.js"></script>
-</body>
+				<div class="Events">
+					<div class="card">
+						<img
+							src="/resources/person1.png"
+							class="card-img-top cardImageSize"
+							alt="..."
+						/>
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+						</div>
+					</div>
+					<div class="card Event">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<ul class="List bg-light overflow-auto">
+				<div class="ListHeader bg-danger">
+					<h4 class="ListHeaderText">list 1</h4>
+					<i class="fas fa-bars ListOptions"></i>
+				</div>
 
+				<div class="Events">
+					<div class="card">
+						<img
+							src="/resources/person1.png"
+							class="card-img-top cardImageSize"
+							alt="..."
+						/>
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+						</div>
+					</div>
+					<div class="card Event">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<ul class="List bg-light overflow-auto">
+				<div class="ListHeader bg-danger">
+					<h4 class="ListHeaderText">list 1</h4>
+					<i class="fas fa-bars ListOptions"></i>
+				</div>
+
+				<div class="Events">
+					<div class="card">
+						<img
+							src="/resources/person1.png"
+							class="card-img-top cardImageSize"
+							alt="..."
+						/>
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+						</div>
+					</div>
+					<div class="card Event">
+						<img src="/resources/person1.png" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title that wraps to a new line</h5>
+							<p class="card-text">
+								This is a longer card with supporting text below as a natural
+								lead-in to additional content. This content is a little bit
+								longer.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<ul class="List bg-light overflow-auto"></ul>
+		</div>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<script src="scripts/board.js"></script>
+	</body>
 </html>

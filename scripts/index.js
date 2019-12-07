@@ -1,4 +1,8 @@
-$("[data-toggle=popover]").popover();
+if (window.matchMedia("(min-width: 1000px)").matches) {
+	console.log("Hello");
+	$("[data-toggle=popover]").popover();
+}
+
 $("#heroRegister").click(function() {
 	let email = $("#heroEmailFormRegister").val();
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {

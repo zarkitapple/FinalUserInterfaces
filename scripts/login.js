@@ -1,12 +1,13 @@
-
-if(isLoggedIn(getCookie("remember"))){
-	$('#alreadyLoggedIn').modal();
+if (isLoggedIn(getCookie("remember"))) {
+	$("#alreadyLoggedIn").modal();
 	let userName = getCookie("remember");
 	var modal = $("#alreadyLoggedIn");
 	modal.find(".modal-title").text("You are already signed in as : " + userName);
-	modal.find(".modal-body").text("Would you like to go to your board ?")
+	modal.find(".modal-body").text("Would you like to go to your board ?");
 }
-$("[data-toggle=popover]").popover();
+if (window.matchMedia("(min-width: 1000px)").matches) {
+	$("[data-toggle=popover]").popover();
+}
 $("#heroRegister").click(function() {
 	let email = $("#emailInput").val();
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
@@ -19,26 +20,28 @@ $("#heroRegister").click(function() {
 		$("#passwordInput").addClass("incorrectFormInput");
 		return;
 	}
-	sha256(email.concat(password)).then(hash => {
-		sessionStorage.setItem("1", hash);
-	}).then( () => {
-	let uuidInput = sessionStorage.getItem("1");
-	let userInfo=checkUser(uuidInput,email,password);
-	if (userInfo==null){
-		$('#userDoesNotexist').modal();
-		return;
-	}
-	let checkbox = $("#checkboxInput:checked").val();
-	if (checkbox == "on") {
-		document.cookie = `remember=${userInfo.userName}; expires=Thu, 20 Dec 2019 12:00:00 UTC`;
-	}
-	location.href = "board.html";
-})
+	sha256(email.concat(password))
+		.then(hash => {
+			sessionStorage.setItem("1", hash);
+		})
+		.then(() => {
+			let uuidInput = sessionStorage.getItem("1");
+			let userInfo = checkUser(uuidInput, email, password);
+			if (userInfo == null) {
+				$("#userDoesNotexist").modal();
+				return;
+			}
+			let checkbox = $("#checkboxInput:checked").val();
+			if (checkbox == "on") {
+				document.cookie = `remember=${userInfo.userName}; expires=Thu, 20 Dec 2019 12:00:00 UTC`;
+			}
+			location.href = "board.html";
+		});
 });
 
-function checkUser(uuidInput,email,password) {
+function checkUser(uuidInput, email, password) {
 	let uuid = localStorage.getItem(uuidInput);
-	if(uuid==null){
+	if (uuid == null) {
 		return null;
 	}
 	let JSONObject = JSON.parse(uuid);
@@ -48,12 +51,11 @@ function checkUser(uuidInput,email,password) {
 	return JSONObject;
 }
 
-function isLoggedIn (value) {
-	if (value==""){
+function isLoggedIn(value) {
+	if (value == "") {
 		return false;
-	}
-	else if(value!=null){
-		return true
+	} else if (value != null) {
+		return true;
 	}
 	return false;
 }
