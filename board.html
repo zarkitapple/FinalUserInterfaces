@@ -18,22 +18,89 @@
 
 <body>
 	<nav class="navbar bg-color-white-bone fixed-top">
-
 		<a class="navbar-brand" href="index.html"><img class="logoImage img-fluid" src="resources/katlogo.png" /></a>
-
-		<div>
-			<i class="fas fa-ellipsis-h mr-2"></i>
-			<i class="fas fa-bell mr-2"></i>
-			<img class="img-fluid rounded-circle userRounded" src="resources/person1.png" alt="Person Image" />
+		<div class="wrapper2">
+			<div>
+				<i class="fas fa-ellipsis-h mr-2"></i>
+				<i class="fas fa-bell mr-2"></i>
+			</div>
+			<div class="nav-item">
+				<img class="img-fluid rounded-circle userRounded dropdown-toggle" id="navbarDropdown"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="resources/person1.png"
+					alt="Person Image" />
+				<div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">My profile</a>
+					<a class="dropdown-item" href="#">Help</a>
+					<div class="dropdown-divider"></div>
+					<button type="button" id="logOutButton" class="btn btn-light bg-color-light-green">Log out</button>
+				</div>
+			</div>
 		</div>
-
 	</nav>
+	<div class="boardHeader">
+		<div class="navbar boardTitle bg-color-light-green text-color-pine-green">
+			<h3 class="font-weight-bold">Tofu shooter game</h3>
+			<div class="wrapper3">
+				<img class="img-fluid rounded-circle userRounded mr-2" src="resources/person3.png" alt="participant1" />
+				<img class="img-fluid rounded-circle userRounded mr-2" src="resources/person2.jpg" alt="participant2" />
+				<i class="fas fa-users participantsIcon"></i>
+			</div>
+		</div>
+	</div>
 	<ul class="nav flex-column align-items-center navLeft">
-		<li class="navBox">
-				<img class="img-fluid imageBoard" src="resources/board.png">
+		<li class="navBox dropright">
+			<img class="img-fluid imageBoard dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false" data-offset="-15,16" src="resources/board.png">
+			<div class="dropdown-menu bg-color-pine-green p-2" aria-labelledby="dropdownMenuOffset">
+				<h4 class="text-color-white-bone ">Boards</h4>
+				<div class="sideBarText text-color-white-bone mb-n1">
+					<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+					<h6> Favourite boards</h6>
+				</div>
+				<div class="dropdown-divider "></div>
+				<div class="sideBarOverflow overflow-auto mb-3">
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+
+				</div>
+				<div class="sideBarText text-color-white-bone">
+					<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+					<h6> Recent Boards</h6>
+				</div>
+				<div class="dropdown-divider"></div>
+				<div class="sideBarOverflow overflow-auto mb-2">
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton mb-2"
+						href="#">Action</button>
+					<button type="button" class="btn btn-light bg-color-light-green sideBarButton"
+						href="#">Action</button>
+				</div>
+			</div>
 		</li>
-		<li class="navBox">
-				<i class="fas fa-search navIcon text-color-white-bone"></i>
+		<li class="navBox dropright">
+			<i class="fas fa-search navIcon text-color-white-bone" id="searchDropdown" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false" data-offset="-15,16"></i>
+			<div class="dropdown-menu p-2 bg-color-pine-green text-color-white-bone ">
+				<form class="">
+					<div class="form-group">
+						<input type="text" class="form-control mb-1" id="search" placeholder="search">
+						<button type="button" class="btn btn-light registerOngreen">Search</button>
+					</div>
+				</form>
+				<div class="dropdown-divider "></div>
+				<h6> Recent search</h6>
+				<a class="dropdown-item text-color-white-bone " href="#">Amsosd</a>
+				<a class="dropdown-item text-color-white-bone " href="#">sasiduaiu</a>
+			</div>
 		</li>
 		<li class="navBox">
 			<i class="fas fa-plus navIcon text-color-white-bone"></i>
@@ -44,78 +111,152 @@
 			<i class="fas fa-history navIcon text-color-white-bone"></i>
 		</li>
 		<li class="navBox">
-				<i class="fas fa-cog navIcon text-color-white-bone"></i>
+			<i class="fas fa-cog navIcon text-color-white-bone"></i>
+		</li class="navBamboo">
+		<img class="navBamboo" src="resources/bamboolong.png">
 		</li>
 	</ul>
-	
-	<section class="wrapper">
-			<div class="card-columns">
-					<div class="card">
-					  <img src="..." class="card-img-top" alt="...">
-					  <div class="card-body">
-						<h5 class="card-title">Card title that wraps to a new line</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					  </div>
-					</div>
-					<div class="card p-3">
-					  <blockquote class="blockquote mb-0 card-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-						<footer class="blockquote-footer">
-						  <small class="text-muted">
-							Someone famous in <cite title="Source Title">Source Title</cite>
-						  </small>
-						</footer>
-					  </blockquote>
-					</div>
-					<div class="card">
-					  <img src="..." class="card-img-top" alt="...">
-					  <div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					  </div>
-					</div>
-					<div class="card bg-primary text-white text-center p-3">
-					  <blockquote class="blockquote mb-0">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-						<footer class="blockquote-footer text-white">
-						  <small>
-							Someone famous in <cite title="Source Title">Source Title</cite>
-						  </small>
-						</footer>
-					  </blockquote>
-					</div>
-					<div class="card text-center">
-					  <div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					  </div>
-					</div>
-					<div class="card">
-					  <img src="..." class="card-img-top" alt="...">
-					</div>
-					<div class="card p-3 text-right">
-					  <blockquote class="blockquote mb-0">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-						<footer class="blockquote-footer">
-						  <small class="text-muted">
-							Someone famous in <cite title="Source Title">Source Title</cite>
-						  </small>
-						</footer>
-					  </blockquote>
-					</div>
-					<div class="card">
-					  <div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					  </div>
-					</div>
-				  </div>
+	<div class="boardMain bg-dark">
+		<ul class="List bg-light overflow-auto">
+			<div class="ListHeader bg-danger">
+				<h4 class="ListHeaderText">list 1</h4>
+				<i class="fas fa-bars ListOptions"></i>
+			</div>
 
-	</section>
-	<!-- Optional JavaScript -->
+			<div class="Events">
+				<div class="card">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+				<div class="card Event">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+				<div class="card Event">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+			</div>
+			<div class="ListFooter bg-danger">
+				<h5 class="ListFooterText">Add a new event</h5>
+				<i class="fas fa-plus ListFooterOption"></i>
+			</div>
+		</ul>
+		<ul class="List bg-light overflow-auto">
+			<div class="ListHeader bg-danger">
+				<h4 class="ListHeaderText">list 1</h4>
+				<i class="fas fa-bars ListOptions"></i>
+			</div>
+			<div class="Events">
+				<div class="card">
+					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
+					<div class="card-header">
+						<h5 class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer</h5>
+					</div>
+					<div class="card-body EventItems">
+
+
+
+						<div class="EventDateComments">
+							<div class="badge badge-warning EventItem">20/2/2020</div>
+							<i class="fas fa-comment EventItem">
+
+							</i>
+							<span class="badge badge-success EventItem">4</span>
+
+						</div>
+						<i class="fas fa-edit EditEvent EventItem"></i>
+					</div>
+
+				</div>
+
+			</div>
+		</ul>
+		<ul class="List bg-light overflow-auto">
+			<div class="ListHeader bg-danger">
+				<h4 class="ListHeaderText">list 1</h4>
+				<i class="fas fa-bars ListOptions"></i>
+			</div>
+
+			<div class="Events">
+				<div class="card">
+					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+					</div>
+				</div>
+				<div class="card Event">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+
+			</div>
+		</ul>
+		<ul class="List bg-light overflow-auto">
+			<div class="ListHeader bg-danger">
+				<h4 class="ListHeaderText">list 1</h4>
+				<i class="fas fa-bars ListOptions"></i>
+			</div>
+
+			<div class="Events">
+				<div class="card">
+					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+					</div>
+				</div>
+				<div class="card Event">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+
+			</div>
+		</ul>
+		<ul class="List bg-light overflow-auto">
+			<div class="ListHeader bg-danger">
+				<h4 class="ListHeaderText">list 1</h4>
+				<i class="fas fa-bars ListOptions"></i>
+			</div>
+
+			<div class="Events">
+				<div class="card">
+					<img src="/resources/person1.png" class="card-img-top cardImageSize" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+					</div>
+				</div>
+				<div class="card Event">
+					<img src="/resources/person1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title that wraps to a new line</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.</p>
+					</div>
+				</div>
+
+			</div>
+		</ul>
+	</div>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
