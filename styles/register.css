@@ -9,9 +9,9 @@
 }
 .wrapper {
 	position: relative;
-	padding-top: 6rem;
+	padding-top: 2rem;
 	padding-bottom: 6rem;
-	background-image: url('../resources/wooden-bg.png');
+	background-image: url("../resources/wooden-bg.png");
 	background-size: cover;
 }
 
