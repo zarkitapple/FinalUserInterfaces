@@ -84,304 +84,747 @@
 				</div>
 			</div>
 		</div>
-		<ul class="nav flex-column align-items-center navLeft">
-			<li class="navBox dropright">
-				<img
-					class="img-fluid imageBoard dropdown-toggle"
-					id="dropdownMenuOffset"
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false"
-					data-offset="-15,16"
-					src="resources/board.png"
-				/>
-				<div
-					class="dropdown-menu bg-color-pine-green p-2"
-					aria-labelledby="dropdownMenuOffset"
-				>
-					<h4 class="text-color-white-bone ">Boards</h4>
-					<div class="sideBarText text-color-white-bone mb-n1">
-						<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
-						<h6>Favourite boards</h6>
-					</div>
-					<div class="dropdown-divider "></div>
-					<div class="sideBarOverflow overflow-auto mb-3">
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-					</div>
-					<div class="sideBarText text-color-white-bone">
-						<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
-						<h6>Recent Boards</h6>
-					</div>
-					<div class="dropdown-divider"></div>
-					<div class="sideBarOverflow overflow-auto mb-2">
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton mb-2"
-							href="#"
-						>
-							Action
-						</button>
-						<button
-							type="button"
-							class="btn btn-light bg-color-light-green sideBarButton"
-							href="#"
-						>
-							Action
-						</button>
-					</div>
-				</div>
-			</li>
-			<li class="navBox dropright">
-				<i
-					class="fas fa-search navIcon text-color-white-bone"
-					id="searchDropdown"
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false"
-					data-offset="-15,16"
-				></i>
-				<div
-					class="dropdown-menu p-2 bg-color-pine-green text-color-white-bone "
-				>
-					<form class="">
-						<div class="form-group">
-							<input
-								type="text"
-								class="form-control mb-1"
-								id="search"
-								placeholder="search"
-							/>
-							<button type="button" class="btn btn-light registerOngreen">
-								Search
-							</button>
-						</div>
-					</form>
-					<div class="dropdown-divider "></div>
-					<h6>Recent search</h6>
-					<a class="dropdown-item text-color-white-bone " href="#">Amsosd</a>
-					<a class="dropdown-item text-color-white-bone " href="#">sasiduaiu</a>
-				</div>
-			</li>
-			<li class="navBox">
-				<i class="fas fa-plus navIcon text-color-white-bone"></i>
-			</li>
-			<li class="navBox">
-				<i class="fas fa-history navIcon text-color-white-bone"></i>
-			</li>
-			<li class="navBox">
-				<i class="fas fa-cog navIcon text-color-white-bone"></i>
-			</li>
-			<img class="navBamboo" src="resources/bamboolong.png" />
-		</ul>
-		<div class="boardMain bg-dark">
-			<ul class="List bg-light overflow-auto">
-				<div class="ListHeader bg-danger">
-					<h4 class="ListHeaderText">list 1</h4>
-					<i class="fas fa-bars ListOptions"></i>
-				</div>
-
-				<div class="Events">
-					<div class="card">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
-					</div>
-					<div class="card Event">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
-					</div>
-					<div class="card Event">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="ListFooter bg-danger">
-					<h5 class="ListFooterText">Add a new event</h5>
-					<i class="fas fa-plus ListFooterOption"></i>
-				</div>
-			</ul>
-			<ul class="List bg-light overflow-auto">
-				<div class="ListHeader bg-danger">
-					<h4 class="ListHeaderText">list 1</h4>
-					<i class="fas fa-bars ListOptions"></i>
-				</div>
-				<div class="Events">
-					<div class="card">
+		<section class="boardContainer">
+			<div class="left">
+				<div class="nav flex-column align-items-center navLeft">
+					<li class="navBox dropright">
 						<img
-							src="/resources/person1.png"
-							class="card-img-top cardImageSize"
-							alt="..."
+							class="img-fluid imageBoard dropdown-toggle"
+							id="dropdownMenuOffset"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+							data-offset="-15,16"
+							src="resources/board.png"
 						/>
-						<div class="card-header">
-							<h5 class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer
-							</h5>
-						</div>
-						<div class="card-body EventItems">
-							<div class="EventDateComments">
-								<div class="badge badge-warning EventItem">20/2/2020</div>
-								<i class="fas fa-comment EventItem"> </i>
-								<span class="badge badge-success EventItem">4</span>
+						<div
+							class="dropdown-menu bg-color-pine-green p-2"
+							aria-labelledby="dropdownMenuOffset"
+						>
+							<h4 class="text-color-white-bone ">Boards</h4>
+							<div class="sideBarText text-color-white-bone mb-n1">
+								<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+								<h6>Favourite boards</h6>
 							</div>
-							<i class="fas fa-edit EditEvent EventItem"></i>
+							<div class="dropdown-divider "></div>
+							<div class="sideBarOverflow overflow-auto mb-3">
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+							</div>
+							<div class="sideBarText text-color-white-bone">
+								<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
+								<h6>Recent Boards</h6>
+							</div>
+							<div class="dropdown-divider"></div>
+							<div class="sideBarOverflow overflow-auto mb-2">
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton mb-2"
+									href="#"
+								>
+									Action
+								</button>
+								<button
+									type="button"
+									class="btn btn-light bg-color-light-green sideBarButton"
+									href="#"
+								>
+									Action
+								</button>
+							</div>
 						</div>
+					</li>
+					<li class="navBox dropright">
+						<i
+							class="fas fa-search navIcon text-color-white-bone"
+							id="searchDropdown"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+							data-offset="-15,16"
+						></i>
+						<div
+							class="dropdown-menu p-2 bg-color-pine-green text-color-white-bone "
+						>
+							<form class="">
+								<div class="form-group">
+									<input
+										type="text"
+										class="form-control mb-1"
+										id="search"
+										placeholder="search"
+									/>
+									<button type="button" class="btn btn-light registerOngreen">
+										Search
+									</button>
+								</div>
+							</form>
+							<div class="dropdown-divider "></div>
+							<h6>Recent search</h6>
+							<a class="dropdown-item text-color-white-bone " href="#"
+								>Amsosd</a
+							>
+							<a class="dropdown-item text-color-white-bone " href="#"
+								>sasiduaiu</a
+							>
+						</div>
+					</li>
+					<li class="navBox">
+						<i class="fas fa-plus navIcon text-color-white-bone"></i>
+					</li>
+					<li class="navBox">
+						<i class="fas fa-history navIcon text-color-white-bone"></i>
+					</li>
+					<li class="navBox">
+						<i class="fas fa-cog navIcon text-color-white-bone"></i>
+					</li>
+				</div>
+				<img class="navBamboo" src="resources/bamboolong.png" />
+			</div>
+			<div class="boardMain bg-color-beige">
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
 					</div>
-				</div>
-			</ul>
-			<ul class="List bg-light overflow-auto">
-				<div class="ListHeader bg-danger">
-					<h4 class="ListHeaderText">list 1</h4>
-					<i class="fas fa-bars ListOptions"></i>
-				</div>
 
-				<div class="Events">
-					<div class="card">
-						<img
-							src="/resources/person1.png"
-							class="card-img-top cardImageSize"
-							alt="..."
-						/>
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
+					<div class="Events">
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
 						</div>
 					</div>
-					<div class="card Event">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
 					</div>
 				</div>
-			</ul>
-			<ul class="List bg-light overflow-auto">
-				<div class="ListHeader bg-danger">
-					<h4 class="ListHeaderText">list 1</h4>
-					<i class="fas fa-bars ListOptions"></i>
-				</div>
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
+					</div>
 
-				<div class="Events">
-					<div class="card">
-						<img
-							src="/resources/person1.png"
-							class="card-img-top cardImageSize"
-							alt="..."
-						/>
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
+					<div class="Events">
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card border-0">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
 						</div>
 					</div>
-					<div class="card Event">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
 					</div>
 				</div>
-			</ul>
-			<ul class="List bg-light overflow-auto">
-				<div class="ListHeader bg-danger">
-					<h4 class="ListHeaderText">list 1</h4>
-					<i class="fas fa-bars ListOptions"></i>
-				</div>
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
+					</div>
 
-				<div class="Events">
-					<div class="card">
-						<img
-							src="/resources/person1.png"
-							class="card-img-top cardImageSize"
-							alt="..."
-						/>
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
+					<div class="Events">
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
 						</div>
 					</div>
-					<div class="card Event">
-						<img src="/resources/person1.png" class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title that wraps to a new line</h5>
-							<p class="card-text">
-								This is a longer card with supporting text below as a natural
-								lead-in to additional content. This content is a little bit
-								longer.
-							</p>
-						</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
 					</div>
 				</div>
-			</ul>
-			<ul class="List bg-light overflow-auto"></ul>
-		</div>
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
+					</div>
+
+					<div class="Events">
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+					</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
+					</div>
+				</div>
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
+					</div>
+
+					<div class="Events">
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+					</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
+					</div>
+				</div>
+				<div class="List bg-color-green">
+					<div class="ListHeader bg-color-green text-color-white-bone">
+						<h4 class="ListHeaderText">list 1</h4>
+						<i class="fas fa-bars ListOptions"></i>
+					</div>
+
+					<div class="Events">
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="/resources/person1.png"
+								class="card-img-top cardImageSize"
+								alt="..."
+							/>
+							<div class="card-header">
+								<h5 class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to addisdnal content. This content is a little bit
+									longer
+								</h5>
+							</div>
+							<div class="card-body EventItems">
+								<div class="EventDateComments">
+									<div class="badge badge-warning EventItem">20/2/2020</div>
+									<i class="fas fa-comment EventItem"> </i>
+									<span class="badge badge-success EventItem">4</span>
+								</div>
+								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+						</div>
+					</div>
+					<div class="ListFooter bg-color-pine-green text-color-white-bone">
+						<i class="fas fa-plus ListFooterOption"></i>
+					</div>
+				</div>
+				<ul class="List"></ul>
+			</div>
+		</section>
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

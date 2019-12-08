@@ -1,37 +1,82 @@
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: 0;
+	border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #2c6705;
+	border-radius: 3px;
+}
+body {
+	overflow: hidden;
+}
+/* Handle on hover */
 .userRounded {
 	width: 40px;
 }
+
+.boardHeader {
+	width: 100%;
+	height: 3.5rem;
+	margin-top: 3.55rem;
+	margin-left: 4.5rem;
+	display: flex;
+	justify-content: flex-start;
+}
+.boardTitle {
+	height: 100%;
+	width: 70%;
+	margin-left: 12%;
+}
+.boardContainer {
+	display: grid;
+	grid-template-areas: "mainLeft boardmain";
+	grid-template-columns: 4rem auto;
+	height: 85%;
+	width: 100vw;
+	overflow: hidden;
+}
+.left {
+	grid-area: mainLeft;
+	display: grid;
+	grid-template-areas:
+		"navLeft"
+		"bamboo";
+	grid-template-rows: min-content auto;
+	height: 100%;
+	width: auto;
+}
 .navLeft {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 3rem;
-	height: 96.5%;
-	padding-top: 7rem;
+	grid-area: navLeft;
+	width: 100%;
+	height: min-content;
 	flex-wrap: nowrap;
-	margin-left: 0.5rem;
 }
 
 .navIcon {
-	font-size: 120%;
+	font-size: auto;
 }
 .navBamboo {
-	width: 100%;
-	height: 68%;
-	bottom: 0;
-	position: relative;
+	grid-area: bamboo;
+	width: 3rem;
+	height: 100%;
+	margin-bottom: 0.4rem;
+	margin-left: 0.5rem;
 }
-
 .navBox {
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
+	width: 3rem;
+	height: 3rem;
 	text-align: center;
 	background-image: url("/resources/bamboo.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 0.6rem;
 	padding-top: 0.7rem;
 	margin-bottom: 0.4rem;
 }
@@ -50,54 +95,48 @@
 	flex-direction: row;
 	align-items: center;
 }
-@media (max-width: 768px) {
-	.wrapper3 {
-		display: none;
-	}
-	.boardTitle {
-		justify-content: center;
-	}
-}
 
 .boardLogo {
 	width: 110px;
 }
-.boardHeader {
-	width: 100%;
-	height: 3.5rem;
-	position: fixed;
-	top: 3.5rem;
+
+@media (max-width: 620px) {
+	.wrapper3 {
+		display: none;
+	}
+	.boardTitle {
+		margin-left: 0%;
+		width: 100%;
+	}
 }
-.boardTitle {
-	height: 100%;
-	width: 70%;
-	margin-left: 15%;
-}
+
 .participantsIcon {
 	font-size: 28px;
 }
 .boardMain {
+	grid-area: boardmain;
 	display: flex;
-	position: fixed;
-	margin-left: 4rem;
-	margin-top: 7rem;
 	padding: 1rem;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
 }
 .List {
+	width: 20rem;
 	min-width: 20rem;
-	width: 19rem;
 	max-height: 100%;
 	height: min-content;
 	display: flex;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	margin-right: 1rem;
 	flex-direction: column;
 	align-items: center;
+	margin-right: 1rem;
+}
+.Events {
+	width: 100%;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	overflow-y: scroll;
 }
 .ListHeader {
 	position: -webkit-sticky;
@@ -123,20 +162,18 @@
 	bottom: 0;
 	z-index: 3;
 	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-}
-.ListFooterText {
-	width: 90%;
-	padding-left: 0.5rem;
 }
 .ListFooterOption {
-	width: 10%;
 	font-size: 1.5rem;
 }
-.Events {
-	width: 100%;
-	margin-top: 1rem;
+.card-text {
+	font-size: 1rem;
+	font-weight: 500;
 }
 .EventItems {
 	display: flex;
