@@ -13,11 +13,17 @@ $("#heroRegister").click(function() {
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 	} else {
 		$("#emailInput").addClass("incorrectFormInput");
+		$("#emailInput").attr("data-trigger", "manual");
+		$("#emailInput").attr("data-content", "Please enter an email address of the form name@domain.extension");
+		$("#emailInput").popover("show");
 		return;
 	}
 	let password = $("#passwordInput").val();
 	if (password.lenght < 8) {
 		$("#passwordInput").addClass("incorrectFormInput");
+		$("#passwordInput").attr("data-trigger", "manual");
+		$("#passwordInput").attr("data-content", "Please enter a password of at least 8 characters");
+		$("#passwordInput").popover("show");
 		return;
 	}
 	sha256(email.concat(password))

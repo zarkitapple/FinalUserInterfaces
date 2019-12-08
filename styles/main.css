@@ -1,7 +1,11 @@
 /* We will use this file to specify our styles */
 
 .text-color-white {
-	color: #ffffff;
+	color: white;
+}
+
+.text-color-black {
+	color: black;
 }
 
 .text-color-white-bone {
@@ -85,11 +89,19 @@ a:hover {
 	border: 0;
 }
 .registerOngreen:hover {
-	background-color: #f8f8f8;
-	color: black;
+	background-color: #ffe69d;
 }
 
 .logo-image {
 	height: 2.75rem;
 	width: auto;
+}
+
+.logo-image-big {
+	height: 4rem;
+	width: auto;
+}
+
+.text-drop-shadow {
+	text-shadow: 2px 2px 4px #302f00b4;
 }

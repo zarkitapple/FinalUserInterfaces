@@ -7,26 +7,52 @@
 	background-color: #6e9a42;
 	color: #f8f8f8;
 }
-.wrapper {
+
+.wrapper-login {
 	position: relative;
 	padding-top: 2rem;
 	padding-bottom: 6rem;
-	background-image: url("../resources/wooden-bg.png");
-	background-size: cover;
 }
 
-.wrapper h1 {
-	font-size: 2rem;
+.wooden-background {
+	background-image: url("../resources/wooden-bg-blank.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: top;
+}
+
+.stems-background {
+	background-image: url("../resources/wooden-bg-stems.png");
+	background-size: cover;
+	background-position: top;
 }
 
 @media (min-width: 992px) {
-	.wrapper {
-		padding: 6rem 0;
-	}
-	.wrapper h1 {
-		font-size: 3rem;
+	.wrapper-login {
+		padding-top: 4.75rem;
+		padding-bottom: 13.75rem;
 	}
 }
+
+.wrapper-register {
+	position: relative;
+	padding-top: 2rem;
+	padding-bottom: 6rem;
+}
+
+@media (min-width: 992px) {
+	.wrapper-register {
+		padding-top: 4.75rem;
+		padding-bottom: 6.75rem;
+	}
+}
+
+.modal-button
+{
+	text-decoration: none;
+	width: 100%;
+}
+
 .mainLogo {
 	width: 400px;
 }
@@ -64,14 +90,15 @@ footer.footer {
 	background-color: #6e9a42;
 	color: #f8f8f8;
 }
+
 .incorrectFormInput {
 	background-color: rgb(252, 150, 150);
 	border: 0;
 }
+
 .incorrectCheckbox {
-	border: 2px rgb(255, 100, 100) solid;
 	background-color: rgb(252, 150, 150);
 	color: black;
-	padding: 1rem;
+	padding: 0.5rem;
 	border-radius: 5px;
 }
