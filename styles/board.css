@@ -20,6 +20,9 @@ body {
 .userRounded {
 	width: 40px;
 }
+.userRounded:hover {
+	cursor: pointer;
+}
 
 .boardHeader {
 	width: 100%;
@@ -81,7 +84,9 @@ body {
 	padding-top: 0.7rem;
 	margin-bottom: 0.4rem;
 }
-
+.navBox:hover {
+	cursor: pointer;
+}
 .wrapper {
 	margin-left: 4rem;
 	padding-top: 5rem;
@@ -173,6 +178,9 @@ body {
 	font-size: 1.5rem;
 	padding-top: 0.2rem;
 }
+.ListOptions:hover {
+	cursor: pointer;
+}
 .ListFooter {
 	position: -webkit-sticky;
 	position: sticky;
@@ -187,6 +195,9 @@ body {
 }
 .ListFooterOption {
 	font-size: 1.5rem;
+}
+.ListFooterOption:hover {
+	cursor: pointer;
 }
 .card-text {
 	font-size: 1rem;
@@ -206,6 +217,9 @@ body {
 }
 .EditEvent {
 	margin-left: auto;
+}
+.EditEvent:hover {
+	cursor: pointer;
 }
 .EventComments {
 	margin-left: auto;
