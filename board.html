@@ -27,7 +27,7 @@
 		<title>Your board</title>
 	</head>
 
-	<body>
+	<body class="bg-color-white-bone">
 		<div
 			class="modal fade"
 			id="SaveList"
@@ -40,7 +40,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalCenterTitle">
-							Do you want to save this list?
+							Do you want to archive this list?
 						</h5>
 						<button
 							type="button"
@@ -60,10 +60,10 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="saveList" class="btn btn-warning">
-							Yes
+							Archive
 						</button>
 					</div>
 				</div>
@@ -104,10 +104,10 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="removeList" class="btn btn-warning">
-							Yes
+							Remove
 						</button>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="saveListTitle" class="btn btn-warning">
 							Save
@@ -214,7 +214,7 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="addList" class="btn btn-warning">
 							Save
@@ -261,10 +261,10 @@
 								class="btn btn-light bg-color-green text-color-white-bone"
 								data-dismiss="modal"
 							>
-								No
+								Cancel
 							</button>
 							<button type="button" class="btn btn-warning">
-								<a href="board.html">Yes</a>
+								<a href="board.html">Reload</a>
 							</button>
 						</div>
 					</div>
@@ -324,7 +324,7 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="addEvent" class="btn btn-warning">
 							Save
@@ -418,7 +418,7 @@
 							class="btn btn-light bg-color-green text-color-white-bone"
 							data-dismiss="modal"
 						>
-							No
+							Cancel
 						</button>
 						<button type="button" id="SaveEvent" class="btn btn-warning">
 							Save
@@ -455,7 +455,7 @@
 						<button
 							type="button"
 							id="logOutButton"
-							class="btn btn-light bg-color-light-green"
+							class="btn btn-light bg-color-gold"
 						>
 							Log out
 						</button>
@@ -465,21 +465,21 @@
 		</nav>
 		<div class="boardHeader">
 			<div class="navbar boardTitle bg-color-light-green text-color-pine-green">
-				<h3 class="font-weight-bold">Tofu shooter game</h3>
+				<h3 class="font-weight-bold mt-2">Tofu shooter game</h3>
 				<div class="wrapper3">
 					<img
-						class="img-fluid rounded-circle userRounded mr-2"
+						class="img-fluid rounded-circle userRounded mr-2 mt-1"
 						src="resources/person3.png"
 						alt="participant1"
 						title="Larry H."
 					/>
 					<img
-						class="img-fluid rounded-circle userRounded mr-2"
+						class="img-fluid rounded-circle userRounded mr-2 mt-1"
 						src="resources/person1.png"
 						alt="participant2"
 						title="John D."
 					/>
-					<i class="fas fa-users participantsIcon"></i>
+					<i class="fas fa-users participantsIcon mt-1 ml-2"></i>
 				</div>
 			</div>
 		</div>
@@ -600,13 +600,13 @@
 						<i class="fas fa-plus navIcon text-color-white-bone"></i>
 					</li>
 					<li class="navBox" id="reloadLists">
-						<i class="fas fa-history navIcon text-color-white-bone"></i>
+						<i class="fas fa-redo navIcon text-color-white-bone"></i>
 					</li>
 					<li class="navBox">
 						<i class="fas fa-cog navIcon text-color-white-bone"></i>
 					</li>
 				</div>
-				<img class="navBamboo" src="resources/bamboolong.png" />
+				<img class="navBamboo bg-color-light-green"/>
 			</div>
 			<div class="boardMain bg-color-beige">
 				<div id="board">
@@ -622,7 +622,7 @@
 							></i>
 							<div class="dropdown-menu shadow-lg">
 								<div class="dropdown-item SaveListToggle">
-									Save List
+									Archive List
 								</div>
 								<div class="dropdown-item removeListToggle">
 									Remove List
@@ -636,7 +636,7 @@
 							<div class="card border-0">
 								<div class="card-header">
 									<div
-										class="priority bg-success"
+										class="priority bg-primary"
 										data-toggle="tooltip"
 										data-container="body"
 										data-placement="right"
@@ -712,7 +712,7 @@
 							<div class="card border-0">
 								<div class="card-header">
 									<div
-										class="priority bg-success"
+										class="priority bg-primary"
 										data-toggle="tooltip"
 										data-container="body"
 										data-placement="right"
@@ -734,8 +734,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="ListFooter bg-color-pine-green text-color-white-bone">
-							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone addEventToggle ">
+							<i class="fas fa-plus ListFooterOption"></i>
 						</div>
 					</div>
 					<div class="List bg-color-green">
@@ -750,7 +750,7 @@
 							></i>
 							<div class="dropdown-menu shadow-lg">
 								<div class="dropdown-item SaveListToggle">
-									Save List
+									Archive List
 								</div>
 								<div class="dropdown-item removeListToggle">
 									Remove List
@@ -788,7 +788,7 @@
 							<div class="card border-0">
 								<div class="card-header searchElement">
 									<div
-										class="priority bg-success"
+										class="priority bg-primary"
 										data-toggle="tooltip"
 										data-container="body"
 										data-placement="right"
@@ -869,8 +869,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="ListFooter bg-color-pine-green text-color-white-bone">
-							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone addEventToggle">
+							<i class="fas fa-plus ListFooterOption"></i>
 						</div>
 					</div>
 					<div class="List bg-color-green">
@@ -885,7 +885,7 @@
 							></i>
 							<div class="dropdown-menu shadow-lg">
 								<div class="dropdown-item SaveListToggle">
-									Save List
+									Archive List
 								</div>
 								<div class="dropdown-item removeListToggle">
 									Remove List
@@ -921,8 +921,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="ListFooter bg-color-pine-green text-color-white-bone">
-							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone addEventToggle">
+							<i class="fas fa-plus ListFooterOption"></i>
 						</div>
 					</div>
 					<div class="List bg-color-green">
@@ -937,7 +937,7 @@
 							></i>
 							<div class="dropdown-menu shadow-lg">
 								<div class="dropdown-item SaveListToggle">
-									Save List
+									Archive List
 								</div>
 								<div class="dropdown-item removeListToggle">
 									Remove List
@@ -1003,8 +1003,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="ListFooter bg-color-pine-green text-color-white-bone">
-							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone addEventToggle">
+							<i class="fas fa-plus ListFooterOption"></i>
 						</div>
 					</div>
 				</div>

@@ -19,6 +19,7 @@ body {
 /* Handle on hover */
 .userRounded {
 	width: 40px;
+	cursor: pointer;
 }
 
 .boardHeader {
@@ -34,6 +35,7 @@ body {
 	width: 70%;
 	margin-left: 12%;
 	margin-right: 5%;
+	border-radius: .5rem .5rem 0 0;
 }
 .boardContainer {
 	display: grid;
@@ -62,6 +64,7 @@ body {
 
 .navIcon {
 	font-size: auto;
+	cursor: pointer;
 }
 .navBamboo {
 	grid-area: bamboo;
@@ -69,6 +72,8 @@ body {
 	height: 100%;
 	margin-bottom: 0.4rem;
 	margin-left: 0.5rem;
+	border-radius: 0.25rem;
+	border: none;
 }
 .navBox {
 	width: 3rem;
@@ -98,7 +103,7 @@ body {
 }
 
 .boardLogo {
-	width: 110px;
+	width: 7.5rem;
 }
 
 @media (max-width: 620px) {
@@ -127,9 +132,10 @@ body {
 	height: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
+	border-radius: .5rem;
 }
 .List {
-	width: 23rem;
+	width: 24rem;
 	min-width: 20rem;
 	max-height: 100%;
 	height: min-content;
@@ -137,10 +143,11 @@ body {
 	flex-direction: column;
 	align-items: center;
 	margin-right: 1rem;
+	border-radius: .5rem;
 }
 .Events {
 	width: 100%;
-	padding-left: 0.5rem;
+	padding-left: 1rem;
 	padding-right: 0.5rem;
 	margin-top: 0.25rem;
 	min-height: 8rem;
@@ -159,11 +166,14 @@ body {
 	position: sticky;
 	top: 0;
 	z-index: 3;
-	padding-top: 0.5rem;
+	padding-top: 0.75rem;
 	display: flex;
 	width: 100%;
 	cursor: grab;
+	border-radius: .5rem .5rem 0 0;
+	padding-left: 0.5rem;
 }
+
 .ListHeaderText {
 	width: 90%;
 	padding-left: 0.5rem;
@@ -172,6 +182,7 @@ body {
 	width: 10%;
 	font-size: 1.5rem;
 	padding-top: 0.2rem;
+	cursor: pointer;
 }
 .ListFooter {
 	position: -webkit-sticky;
@@ -184,6 +195,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	border-radius: 0 0 .5rem .5rem;
+	cursor: pointer;
 }
 .ListFooterOption {
 	font-size: 1.5rem;
@@ -206,6 +219,7 @@ body {
 }
 .EditEvent {
 	margin-left: auto;
+	cursor: pointer;
 }
 .EventComments {
 	margin-left: auto;
@@ -224,6 +238,7 @@ body {
 
 .imageBoard {
 	width: 24px;
+	cursor: pointer;
 }
 
 .sideBarText {
@@ -234,6 +249,7 @@ body {
 }
 .sideBarButton {
 	width: 100%;
+	border: none;
 }
 .sideBarOverflow {
 	max-height: 9rem;

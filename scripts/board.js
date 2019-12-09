@@ -62,7 +62,7 @@ $("#AddListToggle").click(function() {
 $("#addList").click(function() {
 	let modal = $("#AddList");
 	let listTitle = modal.find("#ListaddTitle").val();
-	let list = `<div class="List bg-color-green "><div class="ListHeader bg-color-green text-color-white-bone"><h4 class="ListHeaderText">${listTitle}</h4><i class="fas fa-bars ListOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-220,0" ></i> <div class="dropdown-menu"> <div class="dropdown-item SaveListToggle"> Save List</div><div class="dropdown-item removeListToggle">Remove List </div><div class="dropdown-item ListSettingsToggle"> List Settings </div></div> </div> <div class="Events"> </div><div class="ListFooter bg-color-pine-green text-color-white-bone"><i class="fas fa-plus ListFooterOption"></i></div></div>`;
+	let list = `<div class="List bg-color-green "><div class="ListHeader bg-color-green text-color-white-bone"><h4 class="ListHeaderText">${listTitle}</h4><i class="fas fa-bars ListOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-220,0" ></i> <div class="dropdown-menu"> <div class="dropdown-item SaveListToggle"> Archive List</div><div class="dropdown-item removeListToggle">Remove List </div><div class="dropdown-item ListSettingsToggle"> List Settings </div></div> </div> <div class="Events"> </div><div class="ListFooter bg-color-pine-green text-color-white-bone"><i class="fas fa-plus ListFooterOption"></i></div></div>`;
 	$("#board").append(list);
 	ListSetup();
 	interactionUI();
@@ -158,8 +158,8 @@ function EventOptions() {
 	});
 
 	$(".priority").click(function() {
-		if ($(this).hasClass("bg-success")) {
-			$(this).toggleClass("bg-success");
+		if ($(this).hasClass("bg-primary")) {
+			$(this).toggleClass("bg-primary");
 			$(this).addClass("bg-warning");
 		} else if ($(this).hasClass("bg-warning")) {
 			$(this).toggleClass("bg-warning");
@@ -169,7 +169,7 @@ function EventOptions() {
 			$(this).addClass("bg-secondary");
 		} else if ($(this).hasClass("bg-secondary")) {
 			$(this).toggleClass("bg-secondary");
-			$(this).addClass("bg-success");
+			$(this).addClass("bg-primary");
 		}
 	});
 }
