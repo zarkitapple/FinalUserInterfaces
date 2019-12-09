@@ -1,4 +1,4 @@
-if (window.matchMedia("(min-width: 1000px)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
 	$("[data-toggle=popover]").popover();
 }
 
@@ -10,26 +10,19 @@ $("#heroRegister").click(function() {
 	let name = $("#usernameInput").val();
 	if (name.length == 0) {
 		$("#usernameInput").addClass("incorrectFormInput");
-		$("#usernameInput").attr("data-trigger", "manual");
-		$("#usernameInput").attr("data-content", "Please enter a username");
-		$("#usernameInput").popover("show");
+		$("#usernameInput").val("You must use a username");
 		return;
 	}
 	let email = $("#emailInput").val();
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 	} else {
 		$("#emailInput").addClass("incorrectFormInput");
-		$("#emailInput").attr("data-trigger", "manual");
-		$("#emailInput").attr("data-content", "Please enter an email address of the form name@domain.extension");
-		$("#emailInput").popover("show");
+		$("#emailInput").val("name@domain.extension");
 		return;
 	}
 	let password = $("#passwordInput").val();
 	if (password.length < 8) {
 		$("#passwordInput").addClass("incorrectFormInput");
-		$("#passwordInput").attr("data-trigger", "manual");
-		$("#passwordInput").attr("data-content", "Please enter a password of at least 8 characters");
-		$("#passwordInput").popover("show");
 		return;
 	}
 	let checkbox = $("#checkboxInput:checked").val();

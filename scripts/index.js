@@ -1,5 +1,4 @@
-if (window.matchMedia("(min-width: 1000px)").matches) {
-	console.log("Hello");
+if (window.matchMedia("(min-width: 992px)").matches) {
 	$("[data-toggle=popover]").popover();
 }
 

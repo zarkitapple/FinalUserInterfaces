@@ -5,7 +5,7 @@ if (isLoggedIn(getCookie("remember"))) {
 	modal.find(".modal-title").text("You are already signed in as : " + userName);
 	modal.find(".modal-body").text("Would you like to go to your board ?");
 }
-if (window.matchMedia("(min-width: 1000px)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
 	$("[data-toggle=popover]").popover();
 }
 $("#heroRegister").click(function() {
@@ -13,17 +13,12 @@ $("#heroRegister").click(function() {
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 	} else {
 		$("#emailInput").addClass("incorrectFormInput");
-		$("#emailInput").attr("data-trigger", "manual");
-		$("#emailInput").attr("data-content", "Please enter an email address of the form name@domain.extension");
-		$("#emailInput").popover("show");
+		$("#emailInput").val("name@domain.extension");
 		return;
 	}
 	let password = $("#passwordInput").val();
 	if (password.lenght < 8) {
 		$("#passwordInput").addClass("incorrectFormInput");
-		$("#passwordInput").attr("data-trigger", "manual");
-		$("#passwordInput").attr("data-content", "Please enter a password of at least 8 characters");
-		$("#passwordInput").popover("show");
 		return;
 	}
 	sha256(email.concat(password))

@@ -24,19 +24,416 @@
 			src="https://kit.fontawesome.com/8f1210e758.js"
 			crossorigin="anonymous"
 		></script>
-
 		<title>Your board</title>
 	</head>
 
 	<body>
+		<div
+			class="modal fade"
+			id="SaveList"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							Do you want to save this list?
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>It will still be accessible on your archived lists</p>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="saveList" class="btn btn-warning">
+							Yes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="RemoveList"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							Do you want to remove this list?
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>
+							This list will be completely removed, you will not be able to
+							access it again.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="removeList" class="btn btn-warning">
+							Yes
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="ListSettings"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myLargeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							List Settings
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<form>
+								<input
+									id="ListTitle"
+									type="text"
+									class="form-control mb-2"
+									readonly
+								/>
+							</form>
+							<button
+								type="button"
+								class="btn btn-light bg-color-green text-color-white-bone ml-auto"
+								id="changeTitle"
+							>
+								Edit list title
+							</button>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="saveListTitle" class="btn btn-warning">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="AddList"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myLargeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							Create a new empty list
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="wrapper4">
+							<form>
+								<label>
+									<h6>List Name</h6>
+								</label>
+								<input
+									id="ListaddTitle"
+									type="text"
+									class="form-control"
+									placeholder="New List 5"
+								/>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="addList" class="btn btn-warning">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div
+				class="modal fade"
+				id="reloadModal"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="myLargeModalLabel"
+				aria-hidden="true"
+			>
+				<div
+					class="modal-dialog modal-dialog-centered modal-lg"
+					role="document"
+				>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">
+								Reload the shared lists?
+							</h5>
+							<button
+								type="button"
+								class="close"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+								<div>
+									<b>IMPORTANT:</b> All local changes will be lost
+								</div>
+							</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-light bg-color-green text-color-white-bone"
+								data-dismiss="modal"
+							>
+								No
+							</button>
+							<button type="button" class="btn btn-warning">
+								<a href="board.html">Yes</a>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="AddEvent"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myLargeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							Add Event
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="wrapper4">
+							<form>
+								<label>
+									<h6>Event Description</h6>
+								</label>
+								<input
+									id="EventaddDescription"
+									type="text"
+									class="form-control mb-3"
+									placeholder="Some Description"
+								/>
+								<label>
+									<h6>Event Date</h6>
+								</label>
+								<input
+									id="EventaddDate"
+									type="text"
+									class="form-control"
+									placeholder="Some Description"
+								/>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="addEvent" class="btn btn-warning">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="EditEventModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myLargeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalCenterTitle">
+							Edit Event
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<form class="form-row">
+								<div class="form-group w-100">
+									<label>
+										<h6>Event Description</h6>
+									</label>
+									<input
+										id="EventDescription"
+										type="text"
+										class="form-control mb-2"
+										readonly
+									/>
+									<button
+										type="button"
+										class="btn btn-light bg-color-green text-color-white-bone "
+										id="changeDescription"
+									>
+										Edit
+									</button>
+								</div>
+								<div class="form-group w-100">
+									<label>
+										<h6>Event Date</h6>
+									</label>
+									<input
+										id="EventDate"
+										type="text"
+										class="form-control mb-2"
+										readonly
+									/>
+									<button
+										type="button"
+										class="btn btn-light bg-color-green text-color-white-bone ml-auto"
+										id="changeDate"
+									>
+										Edit
+									</button>
+								</div>
+								<div class="form-group w-100">
+										<label>
+											<h6>Do you want to remove this event?</h6>
+										</label>
+										<button
+											type="button"
+											class="btn btn-warning ml-auto"
+											id="removeEvent"
+										>
+											Yes
+										</button>
+									</div>
+							</form>
+
+							
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-light bg-color-green text-color-white-bone"
+							data-dismiss="modal"
+						>
+							No
+						</button>
+						<button type="button" id="SaveEvent" class="btn btn-warning">
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav class="navbar bg-color-white-bone fixed-top">
 			<a class="navbar-brand" href="index.html"
 				><img class="boardLogo img-fluid" src="resources/katlogo.png"
 			/></a>
 			<div class="wrapper2">
 				<div>
-					<i class="fas fa-ellipsis-h mr-2"></i>
-					<i class="fas fa-bell mr-2"></i>
+					<i class="text-color-pine-green fas fa-bell mr-2"></i>
 				</div>
 				<div class="nav-item">
 					<img
@@ -49,7 +446,7 @@
 						alt="Person Image"
 					/>
 					<div
-						class="dropdown-menu dropdown-menu-right text-center"
+						class="dropdown-menu shadow-lg dropdown-menu-right text-center"
 						aria-labelledby="navbarDropdown"
 					>
 						<a class="dropdown-item" href="#">My profile</a>
@@ -74,11 +471,13 @@
 						class="img-fluid rounded-circle userRounded mr-2"
 						src="resources/person3.png"
 						alt="participant1"
+						title="Larry H."
 					/>
 					<img
 						class="img-fluid rounded-circle userRounded mr-2"
-						src="resources/person2.jpg"
+						src="resources/person1.png"
 						alt="participant2"
+						title="John D."
 					/>
 					<i class="fas fa-users participantsIcon"></i>
 				</div>
@@ -102,7 +501,7 @@
 							aria-labelledby="dropdownMenuOffset"
 						>
 							<h4 class="text-color-white-bone ">Boards</h4>
-							<div class="sideBarText text-color-white-bone mb-n1">
+							<div class="sideBarText text-color-white-bone mb-1">
 								<i class="fas fa-star sidebarTextIcon mr-1 pt-1"></i>
 								<h6>Favourite boards</h6>
 							</div>
@@ -113,28 +512,28 @@
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
+									Tofu shooter game
 								</button>
 								<button
 									type="button"
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
+									Feedback reports
 								</button>
 								<button
 									type="button"
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
+									Office timetable
 								</button>
 								<button
 									type="button"
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
+									Off work
 								</button>
 							</div>
 							<div class="sideBarText text-color-white-bone">
@@ -148,28 +547,14 @@
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
+									Tofu shooter game
 								</button>
 								<button
 									type="button"
 									class="btn btn-light bg-color-light-green sideBarButton mb-2"
 									href="#"
 								>
-									Action
-								</button>
-								<button
-									type="button"
-									class="btn btn-light bg-color-light-green sideBarButton mb-2"
-									href="#"
-								>
-									Action
-								</button>
-								<button
-									type="button"
-									class="btn btn-light bg-color-light-green sideBarButton"
-									href="#"
-								>
-									Action
+									Shopping list
 								</button>
 							</div>
 						</div>
@@ -192,27 +577,29 @@
 										type="text"
 										class="form-control mb-1"
 										id="search"
-										placeholder="search"
+										placeholder="Type here..."
 									/>
-									<button type="button" class="btn btn-light registerOngreen">
+									<button
+										type="button"
+										class="btn btn-light registerOngreen"
+										id="searchToggle"
+									>
 										Search
 									</button>
 								</div>
 							</form>
 							<div class="dropdown-divider "></div>
 							<h6>Recent search</h6>
+							<a class="dropdown-item text-color-white-bone " href="#">24/12</a>
 							<a class="dropdown-item text-color-white-bone " href="#"
-								>Amsosd</a
-							>
-							<a class="dropdown-item text-color-white-bone " href="#"
-								>sasiduaiu</a
+								>cross-play</a
 							>
 						</div>
 					</li>
-					<li class="navBox">
+					<li class="navBox" id="AddListToggle">
 						<i class="fas fa-plus navIcon text-color-white-bone"></i>
 					</li>
-					<li class="navBox">
+					<li class="navBox" id="reloadLists">
 						<i class="fas fa-history navIcon text-color-white-bone"></i>
 					</li>
 					<li class="navBox">
@@ -222,615 +609,411 @@
 				<img class="navBamboo" src="resources/bamboolong.png" />
 			</div>
 			<div class="boardMain bg-color-beige">
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
+				<div id="board">
+					<div class="List bg-color-green">
+						<div class="ListHeader bg-color-green text-color-white-bone">
+							<h4 class="ListHeaderText searchElement">To Do</h4>
+							<i
+								class="fas fa-bars ListOptions"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+								data-offset="-220,0"
+							></i>
+							<div class="dropdown-menu shadow-lg">
+								<div class="dropdown-item SaveListToggle">
+									Save List
+								</div>
+								<div class="dropdown-item removeListToggle">
+									Remove List
+								</div>
+								<div class="dropdown-item ListSettingsToggle">
+									List Settings
+								</div>
+							</div>
+						</div>
+						<div class="Events">
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-success"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="searchElement card-text">
+										ナルト Add kanjis everywhere ナルト
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											8/2/2020
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-success EventItem">2</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-secondary"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="searchElement card-text">
+										Improve AI using <em>Linares'</em> algorithm
+									</h5>
+								</div>
 
-					<div class="Events">
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											20/2/2020
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-danger EventItem">15</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
 								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-secondary"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">Add ramen references</h5>
+									<img
+										src="https://d2p4qauh5fa1j0.cloudfront.net/fotos/recetas/ampliacion/ramen_yJwn9cSaDIBV3tT57OordbgCLuHzP4.jpg"
+										class="card-img-top cardImageSize"
+										alt="..."
+									/>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="searchElement date badge EventItem mr-3">
+											20/6/2020
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-dark EventItem">0</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-success"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										Enable cross-play
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											24/12/2019
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-success EventItem">4</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
 							</div>
 						</div>
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone">
+							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
 						</div>
 					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
+					<div class="List bg-color-green">
+						<div class="ListHeader bg-color-green text-color-white-bone">
+							<h4 class="ListHeaderText searchElement">In Progress</h4>
+							<i
+								class="fas fa-bars ListOptions"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+								data-offset="-220,0"
+							></i>
+							<div class="dropdown-menu shadow-lg">
+								<div class="dropdown-item SaveListToggle">
+									Save List
+								</div>
+								<div class="dropdown-item removeListToggle">
+									Remove List
+								</div>
+								<div class="dropdown-item ListSettingsToggle">
+									List Settings
+								</div>
+							</div>
+						</div>
+						<div class="Events">
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-danger"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										Report beta feedback
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											16/12/2019
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-success EventItem">2</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header searchElement">
+									<div
+										class="priority bg-success"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<img
+										src="https://logosmarcas.com/wp-content/uploads/2018/05/Twitter-logo.png"
+										class="card-img-top cardImageSize"
+										alt="..."
+									/>
+									<h5 class="card-text searchElement">
+										Give away keys on Twitter
+									</h5>
+								</div>
+
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											01/01/1970
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-success EventItem">1</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-danger"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="searchElement card-text">
+										Rework the poor quality SFX<b> John</b> did: <br />
+										<p class="text-color-pine-green">
+											- Improve the cinematics look <br />
+											- Avoid using static sprites <br />
+											- Fix the off-sync 144kbps sounds
+										</p>
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											16/05/2020
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-success EventItem">4</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-warning"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										Reduce server load by un-cluttering the code
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											09/03/2020
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-warning EventItem">7</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+						</div>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone">
+							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						</div>
+					</div>
+					<div class="List bg-color-green">
+						<div class="ListHeader bg-color-green text-color-white-bone">
+							<h4 class=" searchElement ListHeaderText">Done</h4>
+							<i
+								class="fas fa-bars ListOptions"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+								data-offset="-220,0"
+							></i>
+							<div class="dropdown-menu shadow-lg">
+								<div class="dropdown-item SaveListToggle">
+									Save List
+								</div>
+								<div class="dropdown-item removeListToggle">
+									Remove List
+								</div>
+								<div class="dropdown-item ListSettingsToggle">
+									List Settings
+								</div>
+							</div>
+						</div>
+						<div class="Events">
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-secondary"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										Decide the game's name
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											6/10/2019
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-dark EventItem">0</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+						</div>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone">
+							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						</div>
+					</div>
+					<div class="List bg-color-green">
+						<div class="ListHeader bg-color-green text-color-white-bone">
+							<h4 class="ListHeaderText searchElement">New List 4</h4>
+							<i
+								class="fas fa-bars ListOptions"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+								data-offset="-220,0"
+							></i>
+							<div class="dropdown-menu shadow-lg">
+								<div class="dropdown-item SaveListToggle">
+									Save List
+								</div>
+								<div class="dropdown-item removeListToggle">
+									Remove List
+								</div>
+								<div class="dropdown-item ListSettingsToggle">
+									List Settings
+								</div>
+							</div>
+						</div>
+						<div class="Events">
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-secondary"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										backup link for big explosion <br /><br />
+										https://img2.freepng.es/20180130/lbw/kisspng-watermark-explosion-wallpaper-explosion-5a711ce179f4a0.1196673415173624014995.jpg
+									</h5>
+									<img
+										src="https://img2.freepng.es/20180130/lbw/kisspng-watermark-explosion-wallpaper-explosion-5a711ce179f4a0.1196673415173624014995.jpg"
+										class="card-img-top cardImageSize"
+										alt="..."
+									/>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											31/12/2999
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-warning EventItem">6</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+							<div class="card border-0">
+								<div class="card-header">
+									<div
+										class="priority bg-danger"
+										data-toggle="tooltip"
+										data-container="body"
+										data-placement="right"
+										title="Click to change task priority"
+									></div>
+									<h5 class="card-text searchElement">
+										The new guy is called Jim
+									</h5>
+								</div>
+								<div class="card-body EventItems">
+									<div class="EventDateComments">
+										<div class="badge date searchElement EventItem mr-3">
+											07/12/2019
+										</div>
+										<i class="fas fa-comment EventItem"> </i>
+										<span class="badge badge-dark EventItem">0</span>
+									</div>
+									<i class="fas fa-edit EditEvent EventItem"></i>
+								</div>
+							</div>
+						</div>
+						<div class="ListFooter bg-color-pine-green text-color-white-bone">
+							<i class="fas fa-plus ListFooterOption addEventToggle"></i>
+						</div>
 					</div>
 				</div>
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
-
-					<div class="Events">
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card border-0">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
-					</div>
-				</div>
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
-
-					<div class="Events">
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
-					</div>
-				</div>
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
-
-					<div class="Events">
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
-					</div>
-				</div>
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
-
-					<div class="Events">
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
-					</div>
-				</div>
-				<div class="List bg-color-green">
-					<div class="ListHeader bg-color-green text-color-white-bone">
-						<h4 class="ListHeaderText">list 1</h4>
-						<i class="fas fa-bars ListOptions"></i>
-					</div>
-
-					<div class="Events">
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-						<div class="card">
-							<img
-								src="/resources/person1.png"
-								class="card-img-top cardImageSize"
-								alt="..."
-							/>
-							<div class="card-header">
-								<h5 class="card-text">
-									This is a longer card with supporting text below as a natural
-									lead-in to addisdnal content. This content is a little bit
-									longer
-								</h5>
-							</div>
-							<div class="card-body EventItems">
-								<div class="EventDateComments">
-									<div class="badge badge-warning EventItem">20/2/2020</div>
-									<i class="fas fa-comment EventItem"> </i>
-									<span class="badge badge-success EventItem">4</span>
-								</div>
-								<i class="fas fa-edit EditEvent EventItem"></i>
-							</div>
-						</div>
-					</div>
-					<div class="ListFooter bg-color-pine-green text-color-white-bone">
-						<i class="fas fa-plus ListFooterOption"></i>
-					</div>
-				</div>
-				<ul class="List"></ul>
 			</div>
 		</section>
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script
-			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-			crossorigin="anonymous"
-		></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -841,6 +1024,7 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"
 		></script>
+
 		<script src="scripts/board.js"></script>
 	</body>
 </html>
