@@ -97,7 +97,7 @@ $("#AddListToggle").click(function() {
 $("#addList").click(function() {
 	let modal = $("#AddList");
 	let listTitle = modal.find("#ListaddTitle").val();
-	let list = `<div class="List bg-color-green "><div class="ListHeader bg-color-green text-color-white-bone"><h4 class="ListHeaderText">${listTitle}</h4><i class="fas fa-bars ListOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-220,0" ></i> <div class="dropdown-menu"> <div class="dropdown-item SaveListToggle"> Save List</div><div class="dropdown-item removeListToggle">Remove List </div><div class="dropdown-item ListSettingsToggle"> List Settings </div></div> </div> <div class="Events"> </div><div class="ListFooter bg-color-pine-green text-color-white-bone"><i class="fas fa-plus ListFooterOption addEventToggle"></i></div></div>`;
+	let list = `<div class="List bg-color-green "><div class="ListHeader bg-color-green text-color-white-bone"><h4 class="ListHeaderText">${listTitle}</h4><i class="fas fa-bars ListOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-220,0" ></i> <div class="dropdown-menu"> <div class="dropdown-item SaveListToggle"> Save List</div><div class="dropdown-item removeListToggle">Remove List </div><div class="dropdown-item ListSettingsToggle"> List Settings </div></div> </div> <div class="Events"> </div><div class="ListFooter bg-color-pine-green text-color-white-bone addEventToggle"><i class="fas fa-plus ListFooterOption"></i></div></div>`;
 	$("#board").append(list);
 	ListSetup();
 	interactionUI();

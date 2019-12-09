@@ -12,9 +12,9 @@
 header.wrapper {
 	padding-top: calc(2.75rem + 2rem * 1.5 + 6rem);
 	padding-bottom: 6rem;
-	background-image: url("../resources/forest.png");
+	background-image: url("../resources/forest-phone.png");
 	background-size: cover;
-	background-position: center bottom;
+	background-position: center top;
 	background-attachment: fixed;
 }
 
@@ -25,6 +25,10 @@ header.wrapper h1 {
 @media (min-width: 992px) {
 	header.wrapper h1 {
 		font-size: 3rem;
+	}
+
+	header.wrapper {
+		background-image: url("../resources/forest.png");
 	}
 }
 

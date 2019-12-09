@@ -27,6 +27,12 @@
 	background-position: top;
 }
 
+.register-background {
+	background-image: url("../resources/wooden-bg-register.png");
+	background-size: cover;
+	background-position: top;
+}
+
 @media (min-width: 992px) {
 	.wrapper-login {
 		padding-top: 4.75rem;
