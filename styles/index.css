@@ -18,6 +18,11 @@ header.wrapper {
 	background-attachment: fixed;
 }
 
+.computer-view
+{
+	padding-top: 5rem;
+}
+
 header.wrapper h1 {
 	font-size: 2rem;
 }
@@ -29,6 +34,15 @@ header.wrapper h1 {
 
 	header.wrapper {
 		background-image: url("../resources/forest.png");
+	}
+
+	.computer-view
+	{
+		margin-top: 0;
+	}
+
+	.showcase .showcase-text {
+		padding: 0 6rem;
 	}
 }
 
@@ -43,11 +57,12 @@ header.wrapper h1 {
 	);
 }
 
-.showcase .showcase-text {
+.showcase .showcase-text
+{
 	color: #2c6705;
 	margin: auto 0;
 	height: 100%;
-	padding: 0 6rem;
+	padding: 3rem 6rem;
 }
 
 .showcase .showcase-img {
