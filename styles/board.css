@@ -82,7 +82,7 @@ body {
 	width: 3rem;
 	height: 3rem;
 	text-align: center;
-	background-image: url("/FinalUserInterfaces/resources/bamboo.png)");
+	background-image: url("../resources/bamboo.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
